@@ -1,0 +1,223 @@
+{
+  "nav": {
+    "home": "Início",
+    "services": "Serviços",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "cta": {
+    "contact": "Contatar",
+    "login": "Entrar",
+    "install": "Instalar app"
+  },
+  "home": {
+    "title": "AgroApp by Alphaware",
+    "tagline": "Gestão integral para operações agrícolas e pecuárias: tarefas, finanças, estoque, animais e mais.",
+    "features": {
+      "productivity": {
+        "title": "Produtividade",
+        "text": "Planeje tarefas, atribua responsáveis e registre o progresso em tempo real."
+      },
+      "control": {
+        "title": "Controle",
+        "text": "Controle animais, insumos e finanças com relatórios claros."
+      },
+      "simple": {
+        "title": "Simples e rápido",
+        "text": "Projetado para uso no campo, com interface ágil e clara."
+      }
+    },
+    "preview_title": "Conheça a plataforma",
+    "preview_desc": "Visualizações rápidas do painel, tarefas e módulos principais.",
+    "preview_labels": {
+      "dashboard": "Painel",
+      "tasks": "Tarefas",
+      "inventory": "Estoque"
+    },
+    "mission": "Missão",
+    "mission_text": "Impulsionar a eficiência e sustentabilidade das fazendas através de tecnologia acessível, ajudando as equipes a tomar decisões informadas e executar sua operação com excelência.",
+    "vision": "Visão",
+    "vision_text": "Ser a plataforma preferida na América Latina para gerenciar fazendas agrícolas e pecuárias, integrando dados, boas práticas e colaboração.",
+    "install_title": "Instale o AgroApp",
+    "install_text": "Você pode instalá-lo no seu celular ou computador para usá-lo como um aplicativo.",
+    "install_android": "No Android: Abra o menu do navegador e escolha \"Adicionar à tela inicial\".",
+    "install_ios": "No iOS: No Safari, toque em \"Compartilhar\" e depois em \"Adicionar à tela de início\".",
+    "install_desktop": "No desktop: Chrome/Edge mostrarão um botão de instalar na barra de endereços.",
+    "view_manifest": "Ver manifesto"
+  },
+  "app": {
+    "nav": {
+      "dashboard": "Painel",
+      "cultivos": "Culturas",
+      "animales": "Animais",
+      "inventario": "Estoque",
+      "finanzas": "Finanças",
+      "tareas": "Tarefas",
+      "usuarios": "Usuários",
+      "roles": "Funções",
+      "reportes": "Relatórios"
+    },
+    "actions": {
+      "logout": "Sair"
+    }
+  },
+  "meta": {
+    "public_title": "AgroApp by Alphaware",
+    "public_desc": "Plataforma de gestão para fazendas agrícolas e pecuárias"
+  },
+  "common": {
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "required": "Obrigatório",
+    "optional": "opcional",
+    "error": "Erro",
+    "loading": "Carregando",
+    "none": "Nenhum",
+    "edit": "Editar"
+  },
+  "crops": {
+    "detail": "Detalhe da Cultura",
+    "tabs": {
+      "info": "Info",
+      "activities": "Atividades",
+      "expenses": "Despesas"
+    },
+    "fields": {
+      "name": "Nome",
+      "type": "Tipo",
+      "lot": "Lote",
+      "hectares": "Hectares",
+      "status": "Status",
+      "sowing_date": "Data de Semeadura",
+      "harvest_estimate": "Estimativa de Colheita",
+      "expected_yield": "Rendimento Esperado",
+      "risk": "Risco",
+      "notes": "Notas"
+    },
+    "plan": {
+      "title": "Plano de Fertilização",
+      "upload": "Enviar/Substituir Plano",
+      "view": "Ver Plano Atual",
+      "empty": "Nenhum plano enviado.",
+      "uploaded_at": "Enviado em",
+      "success": "Plano enviado com sucesso",
+      "error": "Erro ao enviar plano"
+    },
+    "activities": {
+      "empty": "Nenhuma atividade registrada",
+      "new": "Nova Atividade",
+      "type": "Tipo de Atividade",
+      "date": "Data Programada",
+      "status": "Status",
+      "notes": "Notas"
+    }
+  },
+  "finances": {
+    "hero": {
+      "title": "Finanças",
+      "subtitle": "Controle receitas, despesas, vencimentos e rentabilidade mensal.",
+      "export": "Exportar",
+      "new_transaction": "Nova Transação"
+    },
+    "stats": {
+      "income": "Receitas do Período",
+      "expense": "Despesas do Período",
+      "balance": "Saldo Líquido",
+      "pending": "Pendente a Pagar/Receber"
+    },
+    "filters": {
+      "period": "Período",
+      "all": "Todos",
+      "paid": "Pago",
+      "pending": "Pendente"
+    },
+    "list": {
+      "title": "Transações",
+      "records": "registros",
+      "empty": "Nenhuma transação para os filtros selecionados."
+    },
+    "upcoming": {
+      "title": "Próximos Vencimentos",
+      "top5": "Top 5",
+      "empty": "Sem vencimentos próximos.",
+      "due_in": "Em {} dias",
+      "due_today": "Vence hoje",
+      "overdue": "Vencido há {} dias"
+    },
+    "categories": {
+      "leche": "Venda de Leite",
+      "huevos": "Venda de Ovos",
+      "cultivos": "Venda de Culturas",
+      "animales": "Venda de Animais",
+      "insumos": "Compra de Insumos",
+      "servicios": "Serviços e Manutenção",
+      "nomina": "Folha de Pagamento e Mão de Obra",
+      "otros": "Outros"
+    },
+    "payment_methods": {
+      "efectivo": "Dinheiro",
+      "transferencia": "Transferência",
+      "cheque": "Cheque",
+      "tarjeta": "Cartão",
+      "otro": "Outro"
+    },
+    "status": {
+      "pendiente": "Pendente",
+      "pagado": "Pago"
+    },
+    "messages": {
+      "load_error": "Não foi possível carregar as finanças: {}",
+      "permission_error": "Você não tem permissão para gerenciar finanças.",
+      "farm_error": "Atribua uma fazenda para registrar transações.",
+      "save_success": "Transação registrada.",
+      "update_success": "Transação atualizada.",
+      "save_error": "Não foi possível salvar a transação: {}",
+      "delete_title": "Excluir Transação",
+      "delete_confirm": "Excluir {}? Esta ação não pode ser desfeita.",
+      "delete_success": "Transação excluída.",
+      "delete_error": "Não foi possível excluir a transação: {}",
+      "status_success": "Status atualizado.",
+      "status_error": "Não foi possível atualizar o status: {}",
+      "export_wip": "Exportação em desenvolvimento, em breve."
+    },
+    "expenses": {
+      "empty": "Nenhuma despesa registrada",
+      "new": "Nova Despesa",
+      "concept": "Conceito",
+      "category": "Categoria",
+      "amount": "Custo Total",
+      "date": "Data",
+      "quantity": "Quantidade",
+      "unit": "Unidade",
+      "delete_title": "Excluir Despesa",
+      "delete_confirm": "Tem certeza? Isso excluirá a transação financeira."
+    },
+    "dialog": {
+      "title_new": "Registrar Transação",
+      "title_edit": "Editar Transação",
+      "subtitle": "Registre vendas, compras e pagamentos para manter o fluxo de caixa atualizado.",
+      "type": "Tipo",
+      "income": "Receita",
+      "expense": "Despesa",
+      "category": "Categoria",
+      "concept": "Conceito",
+      "amount": "Valor",
+      "date": "Data",
+      "status": "Status",
+      "notes": "Notas",
+      "document": "Documento / URL",
+      "crop": "Cultura Associada (opcional)",
+      "payment_method": "Método de Pagamento",
+      "stakeholder": "Cliente / Fornecedor",
+      "quantity": "Quantidade (opcional)",
+      "unit": "Unidade (kg, lt)",
+      "actions": {
+        "register": "Registrar",
+        "save_changes": "Salvar Alterações",
+        "mark_pending": "Marcar como Pendente",
+        "mark_paid": "Marcar como Pago"
+      }
+    }
+  }
+}

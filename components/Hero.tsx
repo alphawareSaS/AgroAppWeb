@@ -1,6 +1,6 @@
 
 import React from 'react';
-import imagenHome from '../imagenes/imagenpages/imagenhome.jpg';
+import imagenHome from '../Imagenes/ImagenPages/ImagenHome.jpg';
 
 const Hero: React.FC = () => {
   return (

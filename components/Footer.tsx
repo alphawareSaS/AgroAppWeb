@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import logo from '../imagenes/logo/logo.png';
+import logo from '../Imagenes/Logo/logo.png';
 import avisoPrivacidad from '../Doc/AVISO DE PRIVACIDAD GANIA.pdf';
 import terminosCondiciones from '../Doc/TERMINOS Y CONDICIONES GANIA.pdf';
 

@@ -8,7 +8,7 @@ import DashboardPreview from './components/DashboardPreview';
 import AIAssistant from './components/AIAssistant';
 import Footer from './components/Footer';
 
-import logo from './imagenes/logo/logo.png';
+import logo from './Imagenes/Logo/logo.png';
 
 function App() {
   return (

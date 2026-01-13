@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 
-import logo from '../imagenes/logo/logo.png';
+import logo from '../Imagenes/Logo/logo.png';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

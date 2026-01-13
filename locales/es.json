@@ -1,0 +1,118 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "modules": "Módulos",
+        "services": "Servicios",
+        "demo": "Demo",
+        "start_now": "Empezar ahora"
+    },
+    "hero": {
+        "tag": "AgTech Latinoamericana",
+        "title_start": "Tu Granja en la palma de",
+        "title_tech": "tu mano.",
+        "description": "ganIA: El primer <1>Mayordomo Digital</1> que transforma datos en rentabilidad. Diseñada para funcionar sin internet en el campo profundo.",
+        "cta_start": "Comenzar ahora",
+        "cta_modules": "Ver Módulos",
+        "stat_offline": "Offline-First",
+        "stat_producers": "Productores",
+        "stat_roi": "ROI Proyectado",
+        "stat_category": "Carnes - Leches"
+    },
+    "banner": {
+        "exclusive": "Exclusivo",
+        "text": "Sin Internet, sin problemas. ganIA funciona 100% offline-first en el campo.",
+        "link": "Aprender cómo funciona"
+    },
+    "services": {
+        "s1_title": "Doble Propósito",
+        "s1_desc": "Optimiza la producción de carne y leche simultáneamente con reportes de genealogía y salud animal.",
+        "s2_title": "Gestión de Suelos",
+        "s2_desc": "Mapas dinámicos de tus tierras. Conoce cuándo rotar el ganado o fertilizar según el historial del lote.",
+        "s3_title": "Costos Reales",
+        "s3_desc": "No más suposiciones. ganIA calcula automáticamente el costo por litro de leche o kilo de carne producido."
+    },
+    "modules": {
+        "subtitle": "Arquitectura de la App",
+        "title_start": "Módulos que impulsan",
+        "title_highlight": "tu producción",
+        "m1_title": "Ganadería Inteligente",
+        "m1_desc": "Trazabilidad total para granjas de doble propósito. Control de pesaje, ciclos reproductivos y sanidad automatizada.",
+        "m1_tag1": "Trazabilidad",
+        "m1_tag2": "Leche/Carne",
+        "m2_title": "Gestión por Lotes",
+        "m2_desc": "Mapeo satelital de cultivos. Seguimiento de ocupación, planificación de siembra y cálculo de cosecha estimada.",
+        "m2_tag1": "Agricultura",
+        "m2_tag2": "GIS",
+        "m3_title": "Centro de Costos",
+        "m3_desc": "Control financiero real. Conoce la rentabilidad (ROI) exacta por cada animal o por cada lote de cultivo.",
+        "m3_tag1": "Finanzas",
+        "m3_tag2": "ROI",
+        "m4_title": "Modo Offline-First",
+        "m4_desc": "Sincronización inteligente. La app funciona en el potrero sin señal y se actualiza al llegar a la casa.",
+        "m4_tag1": "Conectividad",
+        "m4_tag2": "Campo"
+    },
+    "vision": {
+        "subtitle": "Visión Artificial",
+        "title_start": "¿Ves un problema?",
+        "title_highlight": "ganIA lo identifica.",
+        "step1_title": "Captura",
+        "step1_desc": "Toma una foto de la hoja o el animal afectado.",
+        "step2_title": "Análisis IA",
+        "step2_desc": "ganIA procesa la imagen buscando patrones de plagas o deficiencias.",
+        "step3_title": "Tratamiento",
+        "step3_desc": "Recibe una recomendación inmediata y guarda el reporte en tu historial.",
+        "ui_status_title": "Diagnóstico en curso",
+        "ui_status_text": "Analizando follaje..."
+    },
+    "dashboard": {
+        "title": "Control Total en Tiempo Real",
+        "description": "Visualiza el rendimiento de tu inversión con gráficos intuitivos y reportes generados automáticamente por nuestra IA.",
+        "card1_title": "Producción Láctea",
+        "card1_trend": "↑ 12% vs mes anterior",
+        "card2_title": "Salud Cultivos (NDVI)",
+        "card2_status": "Estado: Excelente",
+        "card3_title": "Inventario Alimento",
+        "card3_status": "Reordenar en 5 días",
+        "legend_cattle": "Rendimiento Ganadero",
+        "legend_crops": "Crecimiento Cultivos",
+        "months": {
+            "jan": "Ene",
+            "feb": "Feb",
+            "mar": "Mar",
+            "apr": "Abr",
+            "may": "May",
+            "jun": "Jun"
+        }
+    },
+    "caribe": {
+        "title_start": "Diseñada para el productor",
+        "title_highlight": "Moderno.",
+        "description": "Desde pequeñas granjas hasta grandes operaciones, ganIA entiende tu lenguaje, tu entorno y tus retos diarios.",
+        "cta": "Hablar con un asesor"
+    },
+    "cta_final": {
+        "title": "Empieza tu transformación hoy.",
+        "button": "Prueba Gratis Ahora"
+    },
+    "footer": {
+        "slogan": "Transformando el sector agropecuario a través de la innovación tecnológica y la inteligencia artificial.",
+        "product_title": "Producto",
+        "prod_features": "Funcionalidades",
+        "prod_modules": "Módulos IA",
+        "prod_pricing": "Precios",
+        "prod_updates": "Actualizaciones",
+        "company_title": "Compañía",
+        "comp_about": "Sobre Nosotros",
+        "comp_blog": "Blog Agrícola",
+        "comp_careers": "Carreras",
+        "comp_contact": "Contacto",
+        "newsletter_title": "Boletín Informativo",
+        "newsletter_desc": "Recibe consejos de expertos e innovación para tu campo.",
+        "newsletter_placeholder": "Tu email",
+        "copyright": "© 2025 Alphaware S.A.S. Todos los derechos reservados.",
+        "privacy": "Privacidad",
+        "terms": "Términos",
+        "cookies": "Cookies"
+    }
+}

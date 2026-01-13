@@ -1,8 +1,11 @@
 
 import React from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import imagenHome from '../Imagenes/ImagenPages/ImagenHome.jpg';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="inicio" className="relative pt-32 pb-20 overflow-hidden bg-white">
       {/* Background patterns */}
@@ -13,35 +16,37 @@ const Hero: React.FC = () => {
           <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-widest border border-emerald-100 shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              AgTech Latinoamericana
+              {t('hero.tag')}
             </div>
 
             <h1 className="text-5xl lg:text-8xl font-black text-gray-900 leading-tight">
-              Tu Granja en la palma de <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-lime-500">tu mano.</span>
+              {t('hero.title_start')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-lime-500">{t('hero.title_tech')}</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 max-w-xl leading-relaxed mx-auto lg:mx-0 font-medium">
-              ganIA: El primer <span className="text-emerald-700 font-bold">Mayordomo Digital</span> que transforma datos en rentabilidad. Diseñada para funcionar sin internet en el campo profundo.
+              <Trans i18nKey="hero.description">
+                ganIA: El primer <span className="text-emerald-700 font-bold">Mayordomo Digital</span> que transforma datos en rentabilidad. Diseñada para funcionar sin internet en el campo profundo.
+              </Trans>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="https://gania-app.vercel.app/login" className="bg-emerald-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 transition-all shadow-2xl shadow-emerald-200 transform hover:scale-105">
-                Comenzar ahora
+                {t('hero.cta_start')}
               </a>
               <button className="bg-white text-emerald-900 border-2 border-emerald-100 px-10 py-5 rounded-2xl text-lg font-extrabold hover:border-emerald-600 hover:text-emerald-600 transition-all">
-                Ver Módulos
+                {t('hero.cta_modules')}
               </button>
             </div>
 
             <div className="flex items-center justify-center lg:justify-start gap-10 pt-4 opacity-70">
               <div className="flex flex-col">
                 <span className="text-3xl font-black text-emerald-900">100%</span>
-                <span className="text-xs uppercase tracking-widest font-bold text-gray-400">Offline-First</span>
+                <span className="text-xs uppercase tracking-widest font-bold text-gray-400">{t('hero.stat_offline')}</span>
               </div>
               <div className="w-px h-10 bg-gray-200"></div>
               <div className="flex flex-col">
                 <span className="text-3xl font-black text-emerald-900">+5</span>
-                <span className="text-xs uppercase tracking-widest font-bold text-gray-400">Productores</span>
+                <span className="text-xs uppercase tracking-widest font-bold text-gray-400">{t('hero.stat_producers')}</span>
               </div>
             </div>
           </div>
@@ -57,8 +62,8 @@ const Hero: React.FC = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">98%</div>
                   <div>
-                    <div className="text-sm font-black text-gray-900">ROI Proyectado</div>
-                    <div className="text-xs text-emerald-600 font-bold">Carnes - Leches</div>
+                    <div className="text-sm font-black text-gray-900">{t('hero.stat_roi')}</div>
+                    <div className="text-xs text-emerald-600 font-bold">{t('hero.stat_category')}</div>
                   </div>
                 </div>
               </div>

@@ -1,25 +1,27 @@
 
 import React, { useState } from 'react';
-import cultivoImg from '../imagenes/imagenpages/Cultivo.jpg';
-import cultivoTrataImg from '../imagenes/imagenpages/CultivoTrata.jpg';
+import { useTranslation } from 'react-i18next';
+import cultivoImg from '../Imagenes/ImagenPages/Cultivo.jpg';
+import cultivoTrataImg from '../Imagenes/ImagenPages/CultivoTrata.jpg';
 
 const VisionFeature: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const { t } = useTranslation();
 
   const steps = [
     {
-      title: "Captura",
-      desc: "Toma una foto de la hoja o el animal afectado.",
+      title: t('vision.step1_title'),
+      desc: t('vision.step1_desc'),
       img: cultivoImg
     },
     {
-      title: "Análisis IA",
-      desc: "ganIA procesa la imagen buscando patrones de plagas o deficiencias.",
+      title: t('vision.step2_title'),
+      desc: t('vision.step2_desc'),
       img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400"
     },
     {
-      title: "Tratamiento",
-      desc: "Recibe una recomendación inmediata y guarda el reporte en tu historial.",
+      title: t('vision.step3_title'),
+      desc: t('vision.step3_desc'),
       img: cultivoTrataImg
     }
   ];
@@ -29,9 +31,9 @@ const VisionFeature: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:flex items-center gap-20">
           <div className="lg:w-1/2 mb-12 lg:mb-0">
-            <h2 className="text-emerald-600 font-black uppercase tracking-widest text-sm mb-4">Visión Artificial</h2>
+            <h2 className="text-emerald-600 font-black uppercase tracking-widest text-sm mb-4">{t('vision.subtitle')}</h2>
             <h3 className="text-4xl lg:text-5xl font-black text-gray-900 mb-8 leading-tight">
-              ¿Ves un problema? <br /><span className="text-emerald-600">ganIA lo identifica.</span>
+              {t('vision.title_start')} <br /><span className="text-emerald-600">{t('vision.title_highlight')}</span>
             </h3>
 
             <div className="space-y-6">
@@ -69,8 +71,8 @@ const VisionFeature: React.FC = () => {
               <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-white/20">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-[10px] font-black text-emerald-600 uppercase mb-1">Diagnóstico en curso</div>
-                    <div className="text-lg font-bold text-gray-900">Analizando follaje...</div>
+                    <div className="text-[10px] font-black text-emerald-600 uppercase mb-1">{t('vision.ui_status_title')}</div>
+                    <div className="text-lg font-bold text-gray-900">{t('vision.ui_status_text')}</div>
                   </div>
                   <div className="animate-spin h-6 w-6 border-2 border-emerald-600 border-t-transparent rounded-full"></div>
                 </div>

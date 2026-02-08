@@ -1,6 +1,5 @@
-
 {
-  "name": "ganIA - El Mayordomo Digital del Agro",
+  "name": "GanIA - El Mayordomo Digital del Agro",
   "description": "Plataforma AgTech con IA para la gestión de ganadería y cultivos. Funciona offline y ofrece diagnóstico visual de plagas y salud animal.",
   "requestFramePermissions": [
     "microphone",

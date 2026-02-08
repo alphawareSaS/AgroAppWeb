@@ -15,8 +15,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <img src={logo} width={4001} height={2250} alt="ganIA Logo" className="h-12 w-auto object-contain" />
-              <span className="text-2xl font-extrabold text-emerald-900 tracking-tight">ganIA</span>
+              <img src={logo} width={4001} height={2250} alt="GanIA Logo" className="h-12 w-auto object-contain" />
+              <span className="text-2xl font-extrabold text-emerald-900 tracking-tight">GanIA</span>
             </div>
             <p className="text-gray-500 leading-relaxed">
               {t('footer.slogan')}

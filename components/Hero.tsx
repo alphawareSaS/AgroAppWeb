@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
 
             <p className="text-lg sm:text-xl text-gray-600 max-w-xl leading-relaxed mx-auto lg:mx-0 font-medium">
               <Trans i18nKey="hero.description">
-                ganIA: El primer <span className="text-emerald-700 font-bold">Mayordomo Digital</span> que transforma datos en rentabilidad. Diseñada para funcionar sin internet en el campo profundo.
+                GanIA: El primer <span className="text-emerald-700 font-bold">Mayordomo Digital</span> que transforma datos en rentabilidad. Diseñada para funcionar sin internet en el campo profundo.
               </Trans>
             </p>
 

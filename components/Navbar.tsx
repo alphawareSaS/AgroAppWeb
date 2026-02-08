@@ -20,8 +20,8 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center gap-2">
-            <img src={logo} width={4001} height={2250} alt="ganIA Logo" className="h-10 w-auto object-contain" />
-            <span className="text-2xl font-extrabold text-emerald-900 tracking-tight">ganIA</span>
+            <img src={logo} width={4001} height={2250} alt="GanIA Logo" className="h-10 w-auto object-contain" />
+            <span className="text-2xl font-extrabold text-emerald-900 tracking-tight">GanIA</span>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">

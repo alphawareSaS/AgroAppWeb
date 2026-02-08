@@ -10,7 +10,7 @@
         "tag": "Latin American AgTech",
         "title_start": "Your Farm in the palm of",
         "title_tech": "your hand.",
-        "description": "ganIA: The first <1>Digital Steward</1> that transforms data into profitability. Designed to work offline in deep rural areas.",
+        "description": "GanIA: The first <1>Digital Steward</1> that transforms data into profitability. Designed to work offline in deep rural areas.",
         "cta_start": "Start Now",
         "cta_modules": "View Modules",
         "stat_offline": "Offline-First",
@@ -20,7 +20,7 @@
     },
     "banner": {
         "exclusive": "Exclusive",
-        "text": "No Internet, no problem. ganIA works 100% offline-first in the field.",
+        "text": "No Internet, no problem. GanIA works 100% offline-first in the field.",
         "link": "Learn how it works"
     },
     "services": {
@@ -29,7 +29,7 @@
         "s2_title": "Land Management",
         "s2_desc": "Dynamic maps of your land. Know when to rotate cattle or fertilize based on lot history.",
         "s3_title": "Real Costs",
-        "s3_desc": "No more guesswork. ganIA automatically calculates the cost per liter of milk or kilo of meat produced."
+        "s3_desc": "No more guesswork. GanIA automatically calculates the cost per liter of milk or kilo of meat produced."
     },
     "modules": {
         "subtitle": "App Architecture",
@@ -55,11 +55,11 @@
     "vision": {
         "subtitle": "Computer Vision",
         "title_start": "See a problem?",
-        "title_highlight": "ganIA identifies it.",
+        "title_highlight": "GanIA identifies it.",
         "step1_title": "Capture",
         "step1_desc": "Take a photo of the affected leaf or animal.",
         "step2_title": "AI Analysis",
-        "step2_desc": "ganIA processes the image looking for pest patterns or deficiencies.",
+        "step2_desc": "GanIA processes the image looking for pest patterns or deficiencies.",
         "step3_title": "Treatment",
         "step3_desc": "Receive an immediate recommendation and save the report to your history.",
         "ui_status_title": "Diagnosis in progress",
@@ -88,7 +88,7 @@
     "caribe": {
         "title_start": "Designed for the modern",
         "title_highlight": "Producer.",
-        "description": "From small farms to large operations, ganIA understands your language, your environment, and your daily challenges.",
+        "description": "From small farms to large operations, GanIA understands your language, your environment, and your daily challenges.",
         "cta": "Talk to an advisor"
     },
     "cta_final": {

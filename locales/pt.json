@@ -10,7 +10,7 @@
         "tag": "AgTech Latino-americana",
         "title_start": "Sua Fazenda na palma da",
         "title_tech": "sua mão.",
-        "description": "ganIA: O primeiro <1>Mordomo Digital</1> que transforma dados em rentabilidade. Projetado para funcionar sem internet no campo profundo.",
+        "description": "GanIA: O primeiro <1>Mordomo Digital</1> que transforma dados em rentabilidade. Projetado para funcionar sem internet no campo profundo.",
         "cta_start": "Começar agora",
         "cta_modules": "Ver Módulos",
         "stat_offline": "Offline-First",
@@ -20,7 +20,7 @@
     },
     "banner": {
         "exclusive": "Exclusivo",
-        "text": "Sem Internet, sem problemas. ganIA funciona 100% offline-first no campo.",
+        "text": "Sem Internet, sem problemas. GanIA funciona 100% offline-first no campo.",
         "link": "Saiba como funciona"
     },
     "services": {
@@ -29,7 +29,7 @@
         "s2_title": "Gestão de Solos",
         "s2_desc": "Mapas dinâmicos de suas terras. Saiba quando rotacionar o gado ou fertilizar com base no histórico do lote.",
         "s3_title": "Custos Reais",
-        "s3_desc": "Chega de suposições. ganIA calcula automaticamente o custo por litro de leite ou quilo de carne produzido."
+        "s3_desc": "Chega de suposições. GanIA calcula automaticamente o custo por litro de leite ou quilo de carne produzido."
     },
     "modules": {
         "subtitle": "Arquitetura do App",
@@ -55,11 +55,11 @@
     "vision": {
         "subtitle": "Visão Computacional",
         "title_start": "Vê um problema?",
-        "title_highlight": "ganIA o identifica.",
+        "title_highlight": "GanIA o identifica.",
         "step1_title": "Captura",
         "step1_desc": "Tire uma foto da folha ou animal afetado.",
         "step2_title": "Análise IA",
-        "step2_desc": "ganIA processa a imagem procurando padrões de pragas ou deficiências.",
+        "step2_desc": "GanIA processa a imagem procurando padrões de pragas ou deficiências.",
         "step3_title": "Tratamento",
         "step3_desc": "Receba uma recomendação imediata e salve o relatório em seu histórico.",
         "ui_status_title": "Diagnóstico em andamento",
@@ -88,7 +88,7 @@
     "caribe": {
         "title_start": "Projetado para o produtor",
         "title_highlight": "Moderno.",
-        "description": "De pequenas fazendas a grandes operações, ganIA entende sua linguagem, seu ambiente e seus desafios diários.",
+        "description": "De pequenas fazendas a grandes operações, GanIA entende sua linguagem, seu ambiente e seus desafios diários.",
         "cta": "Falar com um consultor"
     },
     "cta_final": {

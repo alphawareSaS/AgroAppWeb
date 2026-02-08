@@ -6,7 +6,7 @@ import { Message } from '../types';
 const AIAssistant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: '¡Hola! Soy ganIA, tu Mayordomo Digital. ¿Cómo va la granja hoy? Puedo ayudarte a calcular costos, revisar la salud de tus animales o diagnosticar problemas en tus cultivos.' }
+    { role: 'assistant', content: '¡Hola! Soy GanIA, tu Mayordomo Digital. ¿Cómo va la granja hoy? Puedo ayudarte a calcular costos, revisar la salud de tus animales o diagnosticar problemas en tus cultivos.' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -83,7 +83,7 @@ const AIAssistant: React.FC = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-                placeholder="Pregúntale a ganIA..."
+                placeholder="Pregúntale a GanIA..."
                 className="flex-1 bg-gray-50 border-none rounded-2xl px-5 py-4 text-sm font-semibold focus:ring-2 focus:ring-emerald-500 transition-all outline-none"
               />
               <button

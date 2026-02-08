@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="https://gania-app.vercel.app/login" className="bg-emerald-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 transition-all shadow-2xl shadow-emerald-200 transform hover:scale-105">
+              <a href="https://app.ganiapp.com/login" className="bg-emerald-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 transition-all shadow-2xl shadow-emerald-200 transform hover:scale-105">
                 {t('hero.cta_start')}
               </a>
               <button className="bg-white text-emerald-900 border-2 border-emerald-100 px-10 py-5 rounded-2xl text-lg font-extrabold hover:border-emerald-600 hover:text-emerald-600 transition-all">

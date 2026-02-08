@@ -84,7 +84,7 @@ function App() {
             <img src={logo} width={4001} height={2250} alt="GanIA Logo" className="h-32 w-auto object-contain mx-auto shadow-xl shadow-emerald-100/50 rounded-2xl" />
             <h2 className="text-5xl font-black text-gray-900">{t('cta_final.title')}</h2>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <a href="https://gania-app.vercel.app/login" className="bg-emerald-600 text-white px-12 py-6 rounded-[2rem] text-xl font-black hover:bg-emerald-700 transition-all shadow-3xl shadow-emerald-200">
+              <a href="https://app.ganiapp.com/login" className="bg-emerald-600 text-white px-12 py-6 rounded-[2rem] text-xl font-black hover:bg-emerald-700 transition-all shadow-3xl shadow-emerald-200">
                 {t('cta_final.button')}
               </a>
             </div>

@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            <a href="https://gania-app.vercel.app/login" className="bg-emerald-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-700 transition-all shadow-md ml-4">
+            <a href="https://app.ganiapp.com/login" className="bg-emerald-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-700 transition-all shadow-md ml-4">
               {t('navbar.start_now')}
             </a>
           </div>
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
             <button onClick={() => changeLanguage('pt')} className={`font-bold ${currentLang === 'pt' ? 'text-emerald-600' : 'text-gray-500'}`}>PT</button>
           </div>
 
-          <a href="https://gania-app.vercel.app/login" className="block w-full text-center bg-emerald-600 text-white px-6 py-2 rounded-lg font-semibold shadow-md">
+          <a href="https://app.ganiapp.com/login" className="block w-full text-center bg-emerald-600 text-white px-6 py-2 rounded-lg font-semibold shadow-md">
             {t('navbar.start_now')}
           </a>
         </div>

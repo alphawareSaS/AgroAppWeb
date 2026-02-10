@@ -8,6 +8,7 @@ import VisionFeature from './components/VisionFeature';
 import DashboardPreview from './components/DashboardPreview';
 import AIAssistant from './components/AIAssistant';
 import Footer from './components/Footer';
+import InstallPWA from './components/InstallPWA';
 
 import logo from './Imagenes/Logo/logo.png';
 
@@ -74,7 +75,7 @@ function App() {
             <p className="text-emerald-100 text-xl max-w-2xl mx-auto mb-12">{t('caribe.description')}</p>
             <div className="inline-flex p-1 bg-white/10 backdrop-blur-md rounded-2xl">
               <a
-                href="https://wa.me/573005487221?text=Hola,%20en%20que%20puedo%20ayudarte"
+                href="https://wa.me/573005487221?text=Hola,%20necesito%20mas%20informacion%20sobre%20GanIA"
                 target="_blank"
                 rel="noopener noreferrer"
               ><button className="bg-lime-400 text-emerald-900 px-8 py-4 rounded-xl font-black hover:bg-white transition-all">{t('caribe.cta')}</button></a>
@@ -98,6 +99,7 @@ function App() {
 
       <Footer />
       <AIAssistant />
+      <InstallPWA />
     </div>
   );
 }

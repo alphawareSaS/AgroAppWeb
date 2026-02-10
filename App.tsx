@@ -9,6 +9,7 @@ import DashboardPreview from './components/DashboardPreview';
 import AIAssistant from './components/AIAssistant';
 import Footer from './components/Footer';
 import InstallPWA from './components/InstallPWA';
+import { Analytics } from "@vercel/analytics/react"
 
 import logo from './Imagenes/Logo/logo.png';
 
@@ -100,6 +101,7 @@ function App() {
       <Footer />
       <AIAssistant />
       <InstallPWA />
+      <Analytics />
     </div>
   );
 }

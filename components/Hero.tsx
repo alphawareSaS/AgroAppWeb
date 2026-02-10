@@ -2,9 +2,12 @@
 import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import imagenHome from '../Imagenes/ImagenPages/ImagenHome.jpg';
+import { usePWA } from '../hooks/usePWA';
+import PWAInstructions from './PWAInstructions';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
+  const { isInstalled, install, showInstructions, setShowInstructions, isIOS } = usePWA();
 
   return (
     <section id="inicio" className="relative pt-32 pb-20 overflow-hidden bg-white">
@@ -33,9 +36,24 @@ const Hero: React.FC = () => {
               <a href="https://app.ganiapp.com/login" className="bg-emerald-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 transition-all shadow-2xl shadow-emerald-200 transform hover:scale-105">
                 {t('hero.cta_start')}
               </a>
-              <button className="bg-white text-emerald-900 border-2 border-emerald-100 px-10 py-5 rounded-2xl text-lg font-extrabold hover:border-emerald-600 hover:text-emerald-600 transition-all">
-                {t('hero.cta_modules')}
-              </button>
+
+              {!isInstalled && (
+                <button
+                  onClick={install}
+                  className="flex items-center gap-3 bg-white text-emerald-900 border-2 border-emerald-100 px-8 py-5 rounded-2xl text-lg font-extrabold hover:border-emerald-600 hover:text-emerald-600 transition-all shadow-sm hover:shadow-md"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Instalar App
+                </button>
+              )}
+
+              <PWAInstructions
+                isOpen={showInstructions}
+                onClose={() => setShowInstructions(false)}
+                isIOS={isIOS}
+              />
             </div>
 
             <div className="flex items-center justify-center lg:justify-start gap-10 pt-4 opacity-70">

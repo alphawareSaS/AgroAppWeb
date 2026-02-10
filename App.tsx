@@ -73,7 +73,7 @@ function App() {
             <h3 className="text-4xl lg:text-6xl font-black mb-8 leading-tight">{t('caribe.title_start')} <br /><span className="text-lime-400">{t('caribe.title_highlight')}</span></h3>
             <p className="text-emerald-100 text-xl max-w-2xl mx-auto mb-12">{t('caribe.description')}</p>
             <div className="inline-flex p-1 bg-white/10 backdrop-blur-md rounded-2xl">
-              <button className="bg-lime-400 text-emerald-900 px-8 py-4 rounded-xl font-black hover:bg-white transition-all">{t('caribe.cta')}</button>
+              <a href="tel:+573005487221"><button className="bg-lime-400 text-emerald-900 px-8 py-4 rounded-xl font-black hover:bg-white transition-all">{t('caribe.cta')}</button></a>
             </div>
           </div>
         </section>

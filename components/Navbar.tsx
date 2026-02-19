@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
             <a href="#inicio" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.home')}</a>
             <a href="#modulos" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.modules')}</a>
             <a href="#servicios" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.services')}</a>
-            <a href="#demo" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.demo')}</a>
+            <a href="/Brochoure GanIA.pdf" download="Brochoure GanIA.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.demo')}</a>
 
             <div className="flex items-center gap-1 border-l border-gray-200 pl-6">
               <button
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
           <a href="#inicio" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.home')}</a>
           <a href="#modulos" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.modules')}</a>
           <a href="#servicios" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.services')}</a>
-          <a href="#demo" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.demo')}</a>
+          <a href="/Brochoure GanIA.pdf" download="Brochoure GanIA.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.demo')}</a>
 
           <div className="flex gap-4 justify-center py-2 border-t border-gray-100">
             <button onClick={() => changeLanguage('es')} className={`font-bold ${currentLang === 'es' ? 'text-emerald-600' : 'text-gray-500'}`}>ES</button>

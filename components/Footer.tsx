@@ -3,8 +3,6 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import logo from '../Imagenes/Logo/logo.png';
-import avisoPrivacidad from '../Doc/AVISO DE PRIVACIDAD GANIA.pdf';
-import terminosCondiciones from '../Doc/TERMINOS Y CONDICIONES GANIA.pdf';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -64,8 +62,8 @@ const Footer: React.FC = () => {
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>{t('footer.copyright')}</p>
           <div className="flex gap-8">
-            <a href={avisoPrivacidad} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600">{t('footer.privacy')}</a>
-            <a href={terminosCondiciones} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600">{t('footer.terms')}</a>
+            <a href="/aviso-de-privacidad.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600">{t('footer.privacy')}</a>
+            <a href="/terminos-y-condiciones.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600">{t('footer.terms')}</a>
             <a href="#" className="hover:text-emerald-600">{t('footer.cookies')}</a>
           </div>
         </div>

@@ -38,6 +38,9 @@ export default defineConfig(({ mode }) => {
               type: 'image/png'
             }
           ]
+        },
+        workbox: {
+          navigateFallbackDenylist: [/^\/.*\.pdf$/]
         }
       })
     ],

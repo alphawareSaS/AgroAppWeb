@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import imagenHome from '../Imagenes/ImagenPages/ImagenHome.jpg';
 import { usePWA } from '../hooks/usePWA';
 import PWAInstructions from './PWAInstructions';
@@ -27,13 +27,23 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 max-w-xl leading-relaxed mx-auto lg:mx-0 font-medium">
-              <Trans i18nKey="hero.description">
-                GanIA: El primer <span className="text-emerald-700 font-bold">Mayordomo Digital</span> que transforma datos en rentabilidad. Diseñada para funcionar sin internet en el campo profundo.
-              </Trans>
+              {t('hero.description')}
             </p>
 
+            {/* Bullets */}
+            <ul className="space-y-3 max-w-xl mx-auto lg:mx-0">
+              {[t('hero.bullet1'), t('hero.bullet2'), t('hero.bullet3')].map((b, i) => (
+                <li key={i} className="flex items-start gap-3 text-gray-700">
+                  <span className="flex-shrink-0 w-7 h-7 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                  </span>
+                  <span className="font-medium">{b}</span>
+                </li>
+              ))}
+            </ul>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="https://app.ganiapp.com/login" className="bg-emerald-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 transition-all shadow-2xl shadow-emerald-200 transform hover:scale-105">
+              <a href="#registro" className="bg-emerald-600 text-white px-10 py-5 rounded-2xl text-lg font-extrabold hover:bg-emerald-700 transition-all shadow-2xl shadow-emerald-200 transform hover:scale-105">
                 {t('hero.cta_start')}
               </a>
 
@@ -63,7 +73,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="w-px h-10 bg-gray-200"></div>
               <div className="flex flex-col">
-                <span className="text-3xl font-black text-emerald-900">+5</span>
+                <span className="text-3xl font-black text-emerald-900">+30</span>
                 <span className="text-xs uppercase tracking-widest font-bold text-gray-400">{t('hero.stat_producers')}</span>
               </div>
             </div>

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.alphaware.gania';
+
 // Define the interface for the beforeinstallprompt event
 interface BeforeInstallPromptEvent extends Event {
     prompt: () => Promise<void>;
@@ -10,6 +12,7 @@ export const usePWA = () => {
     const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
     const [isInstalled, setIsInstalled] = useState(false);
     const [isIOS, setIsIOS] = useState(false);
+    const [isAndroid, setIsAndroid] = useState(false);
     const [showInstructions, setShowInstructions] = useState(false);
 
     useEffect(() => {
@@ -20,6 +23,10 @@ export const usePWA = () => {
         // Check if iOS
         const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
         setIsIOS(iOS);
+
+        // Check if Android
+        const android = /Android/i.test(navigator.userAgent);
+        setIsAndroid(android);
 
         const handleBeforeInstallPrompt = (e: Event) => {
             // Prevent the mini-infobar from appearing on mobile
@@ -36,6 +43,12 @@ export const usePWA = () => {
     }, []);
 
     const install = async () => {
+        // On Android, redirect to Play Store
+        if (isAndroid) {
+            window.open(PLAY_STORE_URL, '_blank', 'noopener,noreferrer');
+            return;
+        }
+
         if (deferredPrompt) {
             // Show the install prompt
             deferredPrompt.prompt();
@@ -55,6 +68,7 @@ export const usePWA = () => {
     return {
         isInstalled,
         isIOS,
+        isAndroid,
         install,
         showInstructions,
         setShowInstructions,

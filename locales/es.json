@@ -2,38 +2,68 @@
     "navbar": {
         "home": "Inicio",
         "modules": "Módulos",
-        "services": "Servicios",
+        "services": "Beneficios",
         "demo": "Brochure",
-        "start_now": "Empezar ahora"
+        "start_now": "Login"
     },
     "hero": {
         "tag": "AgTech Latinoamericana",
-        "title_start": "Tu Granja en la palma de",
-        "title_tech": "tu mano.",
-        "description": "GanIA: El primer <1>Mayordomo Digital</1> que transforma datos en rentabilidad. Diseñada para funcionar sin internet en el campo profundo.",
-        "cta_start": "Comenzar ahora",
+        "title_start": "El control total de tu finca",
+        "title_tech": "a un clic.",
+        "description": "GANIA es una plataforma que te ayuda a saber cuánto produces, cuánto gastas y qué mejorar en tu finca, desde cualquier lugar.",
+        "cta_start": "Quiero información",
         "cta_modules": "Ver Módulos",
         "stat_offline": "Offline-First",
         "stat_producers": "Productores",
         "stat_roi": "ROI Proyectado",
-        "stat_category": "Carnes - Leches"
+        "stat_category": "Carnes - Leches",
+        "bullet1": "Calcula el costo real por litro o por kilo",
+        "bullet2": "Detecta a tiempo problemas en tus cultivos o animales con ayuda de IA",
+        "bullet3": "Funciona 100% sin internet en zonas rurales"
+    },
+    "lead_form": {
+        "page_title": "Accede a beneficios exclusivos del evento",
+        "page_subtitle": "Déjanos tus datos y recibe información, demo y beneficios especiales de GANIA.",
+        "back": "Volver al inicio",
+        "name": "Nombre y apellido",
+        "email": "Correo electrónico",
+        "whatsapp": "Celular (WhatsApp)",
+        "city": "Ciudad / País",
+        "occupation": "¿A qué te dedicas? (Opcional)",
+        "interest": "¿Qué te gustaría mejorar? (Opcional)",
+        "occupation_opt1": "Ganadero",
+        "occupation_opt2": "Agricultor",
+        "occupation_opt3": "Técnico / Asesor",
+        "occupation_opt4": "Otro",
+        "interest_opt1": "Reducir costos",
+        "interest_opt2": "Aumentar producción",
+        "interest_opt3": "Controlar mi finca",
+        "interest_opt4": "Detectar problemas a tiempo",
+        "submit": "Quiero información",
+        "privacy": "Tus datos están protegidos",
+        "contact_note": "Te contactaremos por WhatsApp",
+        "success_title": "¡Gracias por registrarte!",
+        "success_text": "En breve te contactaremos por WhatsApp con tu información y beneficios exclusivos."
     },
     "banner": {
         "exclusive": "Exclusivo",
         "text": "Sin Internet, sin problemas. GanIA funciona 100% offline-first en el campo.",
         "link": "Aprender cómo funciona"
     },
-    "services": {
-        "s1_title": "Doble Propósito",
-        "s1_desc": "Optimiza la producción de carne y leche simultáneamente con reportes de genealogía y salud animal.",
-        "s2_title": "Gestión de Suelos",
-        "s2_desc": "Mapas dinámicos de tus tierras. Conoce cuándo rotar el ganado o fertilizar según el historial del lote.",
-        "s3_title": "Costos Reales",
-        "s3_desc": "No más suposiciones. GanIA calcula automáticamente el costo por litro de leche o kilo de carne producido."
+    "benefits": {
+        "title": "Beneficios para tu finca",
+        "b1_title": "Más control en tu finca",
+        "b1_desc": "Ten toda la información de tu producción, animales y cultivos en un solo lugar.",
+        "b2_title": "Detecta problemas a tiempo",
+        "b2_desc": "Identifica fallas en tus cultivos o animales antes de que afecten tu producción.",
+        "b3_title": "Conoce tus costos reales",
+        "b3_desc": "Deja de adivinar. Calcula automáticamente cuánto te cuesta producir cada litro de leche o kilo de carne.",
+        "b4_title": "Mejora tu producción",
+        "b4_desc": "Optimiza carne y leche, gestiona tus suelos y toma decisiones según el estado real de tu finca."
     },
     "modules": {
         "subtitle": "Arquitectura de la App",
-        "title_start": "Módulos que impulsan",
+        "title_start": "Herramientas para mejorar",
         "title_highlight": "tu producción",
         "m1_title": "Ganadería Inteligente",
         "m1_desc": "Trazabilidad total para granjas de doble propósito. Control de pesaje, ciclos reproductivos y sanidad automatizada.",
@@ -53,9 +83,9 @@
         "m4_tag2": "Campo"
     },
     "vision": {
-        "subtitle": "Visión Artificial",
+        "subtitle": "Inteligencia artificial que cuida tu finca",
         "title_start": "¿Ves un problema?",
-        "title_highlight": "GanIA lo identifica.",
+        "title_highlight": "GANIA te dice qué es y cómo solucionarlo.",
         "step1_title": "Captura",
         "step1_desc": "Toma una foto de la hoja o el animal afectado.",
         "step2_title": "Análisis IA",
@@ -76,6 +106,7 @@
         "card3_status": "Reordenar en 5 días",
         "legend_cattle": "Rendimiento Ganadero",
         "legend_crops": "Crecimiento Cultivos",
+        "cta_demo": "Ver cómo funciona",
         "months": {
             "jan": "Ene",
             "feb": "Feb",
@@ -86,10 +117,11 @@
         }
     },
     "caribe": {
-        "title_start": "Diseñada para el productor",
-        "title_highlight": "Moderno.",
-        "description": "Desde pequeñas granjas hasta grandes operaciones, GanIA entiende tu lenguaje, tu entorno y tus retos diarios.",
-        "cta": "Hablar con un asesor"
+        "title_start": "Diseñada para el",
+        "title_highlight": "productor de hoy.",
+        "description": "Desde pequeñas fincas hasta grandes operaciones, GANIA entiende tu día a día, tu entorno y los retos del campo.",
+        "cta": "Hablar con un asesor",
+        "cta_secondary": "Probar gratis"
     },
     "cta_final": {
         "title": "Empieza tu transformación hoy.",

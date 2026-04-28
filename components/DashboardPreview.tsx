@@ -20,9 +20,18 @@ const DashboardPreview: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">{t('dashboard.title')}</h2>
-          <p className="text-emerald-100 text-lg max-w-2xl mx-auto">
+          <p className="text-emerald-100 text-lg max-w-2xl mx-auto mb-8">
             {t('dashboard.description')}
           </p>
+          <a
+            href="https://app.ganiapp.com/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-lime-400 text-emerald-900 px-8 py-4 rounded-2xl font-black hover:bg-white transition-all shadow-xl"
+          >
+            {t('dashboard.cta_demo')}
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+          </a>
         </div>
 
         <div className="bg-white rounded-3xl p-6 lg:p-10 shadow-2xl text-gray-900">

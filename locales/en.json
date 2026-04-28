@@ -2,38 +2,68 @@
     "navbar": {
         "home": "Home",
         "modules": "Modules",
-        "services": "Services",
+        "services": "Benefits",
         "demo": "Brochure",
-        "start_now": "Start Now"
+        "start_now": "I want info"
     },
     "hero": {
         "tag": "Latin American AgTech",
-        "title_start": "Your Farm in the palm of",
-        "title_tech": "your hand.",
-        "description": "GanIA: The first <1>Digital Steward</1> that transforms data into profitability. Designed to work offline in deep rural areas.",
-        "cta_start": "Start Now",
+        "title_start": "Total control of your farm",
+        "title_tech": "in one click.",
+        "description": "GANIA is a platform that helps you know how much you produce, how much you spend, and what to improve on your farm, from anywhere.",
+        "cta_start": "I want info",
         "cta_modules": "View Modules",
         "stat_offline": "Offline-First",
         "stat_producers": "Producers",
         "stat_roi": "Projected ROI",
-        "stat_category": "Meat - Dairy"
+        "stat_category": "Meat - Dairy",
+        "bullet1": "Calculate the real cost per liter or kilo",
+        "bullet2": "Detect crop or animal issues early with AI assistance",
+        "bullet3": "Works 100% offline in rural areas"
+    },
+    "lead_form": {
+        "page_title": "Access exclusive event benefits",
+        "page_subtitle": "Leave us your details and receive information, demo, and special GANIA benefits.",
+        "back": "Back to home",
+        "name": "Full name",
+        "email": "Email",
+        "whatsapp": "Phone (WhatsApp)",
+        "city": "City / Country",
+        "occupation": "What do you do? (Optional)",
+        "interest": "What would you like to improve? (Optional)",
+        "occupation_opt1": "Cattle rancher",
+        "occupation_opt2": "Farmer",
+        "occupation_opt3": "Technician / Advisor",
+        "occupation_opt4": "Other",
+        "interest_opt1": "Reduce costs",
+        "interest_opt2": "Increase production",
+        "interest_opt3": "Control my farm",
+        "interest_opt4": "Detect issues early",
+        "submit": "I want info",
+        "privacy": "Your data is protected",
+        "contact_note": "We'll contact you on WhatsApp",
+        "success_title": "Thanks for registering!",
+        "success_text": "We'll contact you shortly on WhatsApp with your information and exclusive benefits."
     },
     "banner": {
         "exclusive": "Exclusive",
         "text": "No Internet, no problem. GanIA works 100% offline-first in the field.",
         "link": "Learn how it works"
     },
-    "services": {
-        "s1_title": "Dual Purpose",
-        "s1_desc": "Optimize meat and dairy production simultaneously with genealogy and animal health reports.",
-        "s2_title": "Land Management",
-        "s2_desc": "Dynamic maps of your land. Know when to rotate cattle or fertilize based on lot history.",
-        "s3_title": "Real Costs",
-        "s3_desc": "No more guesswork. GanIA automatically calculates the cost per liter of milk or kilo of meat produced."
+    "benefits": {
+        "title": "Benefits for your farm",
+        "b1_title": "More control on your farm",
+        "b1_desc": "Have all your production, livestock, and crop information in one place.",
+        "b2_title": "Detect issues early",
+        "b2_desc": "Identify problems in your crops or animals before they affect your production.",
+        "b3_title": "Know your real costs",
+        "b3_desc": "Stop guessing. Automatically calculate the cost to produce each liter of milk or kilo of meat.",
+        "b4_title": "Improve your production",
+        "b4_desc": "Optimize meat and dairy, manage your soils, and make decisions based on the real state of your farm."
     },
     "modules": {
         "subtitle": "App Architecture",
-        "title_start": "Modules that drive",
+        "title_start": "Tools to improve",
         "title_highlight": "your production",
         "m1_title": "Smart Farming",
         "m1_desc": "Total traceability for dual-purpose farms. Weight control, reproductive cycles, and automated health.",
@@ -53,9 +83,9 @@
         "m4_tag2": "Field"
     },
     "vision": {
-        "subtitle": "Computer Vision",
+        "subtitle": "Artificial intelligence that cares for your farm",
         "title_start": "See a problem?",
-        "title_highlight": "GanIA identifies it.",
+        "title_highlight": "GANIA tells you what it is and how to fix it.",
         "step1_title": "Capture",
         "step1_desc": "Take a photo of the affected leaf or animal.",
         "step2_title": "AI Analysis",
@@ -76,6 +106,7 @@
         "card3_status": "Reorder in 5 days",
         "legend_cattle": "Livestock Performance",
         "legend_crops": "Crop Growth",
+        "cta_demo": "See how it works",
         "months": {
             "jan": "Jan",
             "feb": "Feb",
@@ -86,10 +117,11 @@
         }
     },
     "caribe": {
-        "title_start": "Designed for the modern",
-        "title_highlight": "Producer.",
-        "description": "From small farms to large operations, GanIA understands your language, your environment, and your daily challenges.",
-        "cta": "Talk to an advisor"
+        "title_start": "Designed for",
+        "title_highlight": "today's producer.",
+        "description": "From small farms to large operations, GANIA understands your day-to-day, your environment, and the challenges of the field.",
+        "cta": "Talk to an advisor",
+        "cta_secondary": "Try for free"
     },
     "cta_final": {
         "title": "Start your transformation today.",

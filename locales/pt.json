@@ -117,6 +117,13 @@
             "jun": "Jun"
         }
     },
+    "about": {
+        "title": "O que é o GanIA?",
+        "p1": "GanIA é uma plataforma inteligente de gestão agrícola e pecuária projetada para modernizar e otimizar a administração de fazendas, cultivos e explorações pecuárias por meio de tecnologia digital. Centraliza todas as informações do campo em um só lugar, facilitando o controle dos processos produtivos, a rastreabilidade e a tomada de decisões baseada em dados em tempo real.",
+        "p2": "Com o GanIA, produtores e empresas agropecuárias podem gerenciar tanto a produção agrícola quanto a pecuária, incluindo controle de animais, registros sanitários, alimentação, reprodução, estoques e produtividade do rebanho. Integra ainda ferramentas de monitoramento, análise e automação que ajudam a reduzir custos, melhorar a eficiência operacional e maximizar a rentabilidade.",
+        "p3": "Sua abordagem combina agricultura digital, pecuária inteligente e analítica de dados, oferecendo uma solução completa, acessível e escalável para o setor rural.",
+        "p4": "Ideal para fazendas, pecuaristas, agricultores e empresas que buscam transformar sua operação com tecnologia, melhorar o controle de recursos e aumentar a produtividade do campo."
+    },
     "caribe": {
         "title_start": "Projetado para o",
         "title_highlight": "produtor de hoje",

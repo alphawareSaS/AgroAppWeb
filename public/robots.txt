@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /Brochoure GanIA.pdf
+
+Sitemap: https://ganiapp.com/sitemap.xml

@@ -101,6 +101,21 @@ function App() {
         <VisionFeature />
         <DashboardPreview />
 
+        {/* SEO content section - About GanIA */}
+        <section aria-labelledby="about-gania" className="py-16 sm:py-24 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="about-gania" className="text-3xl sm:text-4xl font-black text-gray-900 mb-8 text-center">
+              {t('about.title')}
+            </h2>
+            <div className="prose prose-lg max-w-none text-gray-600 space-y-5 leading-relaxed">
+              <p>{t('about.p1')}</p>
+              <p>{t('about.p2')}</p>
+              <p>{t('about.p3')}</p>
+              <p className="font-semibold text-gray-800">{t('about.p4')}</p>
+            </div>
+          </div>
+        </section>
+
         {/* Diseñada para el productor de hoy */}
         <section className="py-16 sm:py-24 lg:py-32 bg-emerald-950 text-white relative overflow-hidden">
           <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none">

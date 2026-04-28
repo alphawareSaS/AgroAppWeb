@@ -117,6 +117,13 @@
             "jun": "Jun"
         }
     },
+    "about": {
+        "title": "What is GanIA?",
+        "p1": "GanIA is an intelligent agricultural and livestock management platform designed to modernize and optimize the administration of farms, crops, and livestock operations through digital technology. It centralizes all field information in one place, simplifying production control, traceability, and real-time data-driven decision making.",
+        "p2": "With GanIA, producers and agribusinesses can manage both agricultural production and livestock, including animal control, health records, feeding, reproduction, inventories, and herd productivity. It also integrates monitoring, analytics, and automation tools that reduce costs, improve operational efficiency, and maximize profitability.",
+        "p3": "Its approach combines digital agriculture, smart livestock farming, and data analytics, delivering a complete, accessible, and scalable solution for the rural sector.",
+        "p4": "Ideal for farms, ranchers, growers, and companies looking to transform their operation with technology, improve resource control, and boost productivity in the field."
+    },
     "caribe": {
         "title_start": "Designed for",
         "title_highlight": "today's producer",

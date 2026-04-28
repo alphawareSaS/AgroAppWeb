@@ -58,7 +58,7 @@ const VisionFeature: React.FC = () => {
           </div>
 
           <div className="lg:w-1/2 relative">
-            <div className="bg-emerald-900 aspect-square rounded-[3rem] overflow-hidden relative shadow-2xl">
+            <div className="bg-emerald-900 aspect-square rounded-3xl sm:rounded-[3rem] overflow-hidden relative shadow-2xl">
               <img
                 src={steps[activeStep].img}
                 alt="Preview"
@@ -68,13 +68,13 @@ const VisionFeature: React.FC = () => {
               {/* Scanline Effect */}
               <div className="absolute top-0 left-0 w-full h-1 bg-emerald-400/50 shadow-[0_0_20px_rgba(52,211,153,0.8)] animate-scan"></div>
 
-              <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-white/20">
-                <div className="flex items-center justify-between">
-                  <div>
+              <div className="absolute bottom-4 sm:bottom-10 left-4 sm:left-10 right-4 sm:right-10 bg-white/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-white/20">
+                <div className="flex items-center justify-between gap-3">
+                  <div className="min-w-0">
                     <div className="text-[10px] font-black text-emerald-600 uppercase mb-1">{t('vision.ui_status_title')}</div>
-                    <div className="text-lg font-bold text-gray-900">{t('vision.ui_status_text')}</div>
+                    <div className="text-sm sm:text-lg font-bold text-gray-900 truncate">{t('vision.ui_status_text')}</div>
                   </div>
-                  <div className="animate-spin h-6 w-6 border-2 border-emerald-600 border-t-transparent rounded-full"></div>
+                  <div className="animate-spin h-5 w-5 sm:h-6 sm:w-6 border-2 border-emerald-600 border-t-transparent rounded-full flex-shrink-0"></div>
                 </div>
               </div>
             </div>

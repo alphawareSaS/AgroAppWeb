@@ -78,19 +78,19 @@ function App() {
         </div>
 
         {/* Beneficios para tu finca */}
-        <section id="beneficios" className="py-32 bg-white relative">
+        <section id="beneficios" className="py-16 sm:py-24 lg:py-32 bg-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl lg:text-5xl font-black text-gray-900">{t('benefits.title')}</h2>
+            <div className="text-center mb-12 sm:mb-20">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900">{t('benefits.title')}</h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {benefits.map((b, idx) => (
-                <div key={idx} className="bg-gray-50 p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
+                <div key={idx} className="bg-gray-50 p-6 sm:p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
                   <div className="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center text-white mb-6">
                     {b.icon}
                   </div>
-                  <h4 className="text-xl font-black text-gray-900 mb-3">{b.title}</h4>
-                  <p className="text-gray-600 font-medium leading-relaxed">{b.desc}</p>
+                  <h4 className="text-lg sm:text-xl font-black text-gray-900 mb-3">{b.title}</h4>
+                  <p className="text-gray-600 font-medium leading-relaxed text-sm sm:text-base">{b.desc}</p>
                 </div>
               ))}
             </div>
@@ -102,35 +102,35 @@ function App() {
         <DashboardPreview />
 
         {/* Diseñada para el productor de hoy */}
-        <section className="py-32 bg-emerald-950 text-white relative overflow-hidden">
+        <section className="py-16 sm:py-24 lg:py-32 bg-emerald-950 text-white relative overflow-hidden">
           <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none">
             <svg width="400" height="400" viewBox="0 0 24 24" fill="white"><path d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z" /></svg>
           </div>
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <h3 className="text-4xl lg:text-6xl font-black mb-8 leading-tight">{t('caribe.title_start')} <br /><span className="text-lime-400">{t('caribe.title_highlight')}</span></h3>
-            <p className="text-emerald-100 text-xl max-w-2xl mx-auto mb-12">{t('caribe.description')}</p>
+            <h3 className="text-3xl sm:text-4xl lg:text-6xl font-black mb-6 sm:mb-8 leading-tight">{t('caribe.title_start')} <br /><span className="text-lime-400">{t('caribe.title_highlight')}</span></h3>
+            <p className="text-emerald-100 text-base sm:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 px-2">{t('caribe.description')}</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/573005487221?text=Hola,%20necesito%20mas%20informacion%20sobre%20GanIA"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="bg-lime-400 text-emerald-900 px-10 py-5 rounded-2xl font-black hover:bg-white transition-all w-full sm:w-auto">{t('caribe.cta')}</button>
+                <button className="bg-lime-400 text-emerald-900 px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-black hover:bg-white transition-all w-full sm:w-auto">{t('caribe.cta')}</button>
               </a>
               <a href="#inicio">
-                <button className="bg-transparent text-white border-2 border-white/40 px-10 py-5 rounded-2xl font-black hover:bg-white/10 hover:border-white transition-all w-full sm:w-auto">{t('caribe.cta_secondary')}</button>
+                <button className="bg-transparent text-white border-2 border-white/40 px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-black hover:bg-white/10 hover:border-white transition-all w-full sm:w-auto">{t('caribe.cta_secondary')}</button>
               </a>
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="py-32 bg-white">
-          <div className="max-w-4xl mx-auto px-4 text-center space-y-12">
-            <img src={logo} width={4001} height={2250} alt="GanIA Logo" className="h-32 w-auto object-contain mx-auto shadow-xl shadow-emerald-100/50 rounded-2xl" />
-            <h2 className="text-5xl font-black text-gray-900">{t('cta_final.title')}</h2>
+        <section className="py-16 sm:py-24 lg:py-32 bg-white">
+          <div className="max-w-4xl mx-auto px-4 text-center space-y-8 sm:space-y-12">
+            <img src={logo} width={4001} height={2250} alt="GanIA Logo" className="h-20 sm:h-32 w-auto object-contain mx-auto shadow-xl shadow-emerald-100/50 rounded-2xl" />
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900">{t('cta_final.title')}</h2>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <a href="#inicio" className="bg-emerald-600 text-white px-12 py-6 rounded-[2rem] text-xl font-black hover:bg-emerald-700 transition-all shadow-3xl shadow-emerald-200">
+              <a href="#inicio" className="bg-emerald-600 text-white px-8 sm:px-12 py-4 sm:py-6 rounded-[2rem] text-lg sm:text-xl font-black hover:bg-emerald-700 transition-all shadow-3xl shadow-emerald-200">
                 {t('cta_final.button')}
               </a>
             </div>

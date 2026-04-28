@@ -16,44 +16,44 @@ const DashboardPreview: React.FC = () => {
   ];
 
   return (
-    <section id="demo" className="py-24 bg-emerald-900 text-white overflow-hidden">
+    <section id="demo" className="py-16 sm:py-24 bg-emerald-900 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">{t('dashboard.title')}</h2>
-          <p className="text-emerald-100 text-lg max-w-2xl mx-auto mb-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('dashboard.title')}</h2>
+          <p className="text-emerald-100 text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
             {t('dashboard.description')}
           </p>
           <a
             href="https://app.ganiapp.com/login"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-lime-400 text-emerald-900 px-8 py-4 rounded-2xl font-black hover:bg-white transition-all shadow-xl"
+            className="inline-flex items-center gap-2 bg-lime-400 text-emerald-900 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl text-sm sm:text-base font-black hover:bg-white transition-all shadow-xl"
           >
             {t('dashboard.cta_demo')}
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
           </a>
         </div>
 
-        <div className="bg-white rounded-3xl p-6 lg:p-10 shadow-2xl text-gray-900">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
-            <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
-              <div className="text-emerald-600 text-sm font-bold uppercase tracking-wider mb-2">{t('dashboard.card1_title')}</div>
-              <div className="text-3xl font-bold">1,240 L</div>
-              <div className="text-sm text-emerald-600 mt-2 font-medium">{t('dashboard.card1_trend')}</div>
+        <div className="bg-white rounded-3xl p-4 sm:p-6 lg:p-10 shadow-2xl text-gray-900">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-10">
+            <div className="bg-emerald-50 p-5 sm:p-6 rounded-2xl border border-emerald-100">
+              <div className="text-emerald-600 text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">{t('dashboard.card1_title')}</div>
+              <div className="text-2xl sm:text-3xl font-bold">1,240 L</div>
+              <div className="text-xs sm:text-sm text-emerald-600 mt-2 font-medium">{t('dashboard.card1_trend')}</div>
             </div>
-            <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-              <div className="text-blue-600 text-sm font-bold uppercase tracking-wider mb-2">{t('dashboard.card2_title')}</div>
-              <div className="text-3xl font-bold">0.82</div>
-              <div className="text-sm text-blue-600 mt-2 font-medium">{t('dashboard.card2_status')}</div>
+            <div className="bg-blue-50 p-5 sm:p-6 rounded-2xl border border-blue-100">
+              <div className="text-blue-600 text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">{t('dashboard.card2_title')}</div>
+              <div className="text-2xl sm:text-3xl font-bold">0.82</div>
+              <div className="text-xs sm:text-sm text-blue-600 mt-2 font-medium">{t('dashboard.card2_status')}</div>
             </div>
-            <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100">
-              <div className="text-amber-600 text-sm font-bold uppercase tracking-wider mb-2">{t('dashboard.card3_title')}</div>
-              <div className="text-3xl font-bold">4.2 Ton</div>
-              <div className="text-sm text-amber-600 mt-2 font-medium">{t('dashboard.card3_status')}</div>
+            <div className="bg-amber-50 p-5 sm:p-6 rounded-2xl border border-amber-100">
+              <div className="text-amber-600 text-xs sm:text-sm font-bold uppercase tracking-wider mb-2">{t('dashboard.card3_title')}</div>
+              <div className="text-2xl sm:text-3xl font-bold">4.2 Ton</div>
+              <div className="text-xs sm:text-sm text-amber-600 mt-2 font-medium">{t('dashboard.card3_status')}</div>
             </div>
           </div>
 
-          <div className="h-[400px] w-full">
+          <div className="h-[260px] sm:h-[400px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={data}>
                 <defs>

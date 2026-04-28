@@ -9,7 +9,7 @@
     "hero": {
         "tag": "AgTech Latinoamericana",
         "title_start": "El control total de tu finca",
-        "title_tech": "a un clic.",
+        "title_tech": "a un clic",
         "description": "GANIA es una plataforma que te ayuda a saber cuánto produces, cuánto gastas y qué mejorar en tu finca, desde cualquier lugar.",
         "cta_start": "Quiero información",
         "cta_modules": "Ver Módulos",
@@ -125,7 +125,7 @@
         "cta_secondary": "Probar gratis"
     },
     "cta_final": {
-        "title": "Empieza tu transformación hoy.",
+        "title": "Empieza tu transformación hoy",
         "button": "Prueba Gratis Ahora"
     },
     "footer": {

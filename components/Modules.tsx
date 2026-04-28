@@ -49,8 +49,9 @@ const Modules: React.FC = () => {
   ];
 
   return (
-    <section id="modulos" className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="modulos" className="py-32 bg-gradient-to-b from-emerald-50 via-white to-emerald-50/40 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#059669 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }}></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-24">
           <h2 className="text-emerald-600 font-black uppercase tracking-[0.3em] text-xs mb-4">{t('modules.subtitle')}</h2>
           <h3 className="text-5xl font-black text-gray-900">{t('modules.title_start')} <span className="text-emerald-600">{t('modules.title_highlight')}</span></h3>
@@ -58,7 +59,7 @@ const Modules: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {modules.map((m, idx) => (
-            <div key={idx} className="group bg-gray-50 p-8 rounded-[2.5rem] hover:bg-emerald-600 hover:text-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+            <div key={idx} className="group bg-white p-8 rounded-[2.5rem] border border-emerald-100 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-emerald-600 mb-8 shadow-sm group-hover:scale-110 transition-transform">
                 {m.icon}
               </div>
@@ -70,9 +71,14 @@ const Modules: React.FC = () => {
                 ))}
               </div>
               <h4 className="text-2xl font-bold mb-4">{m.title}</h4>
-              <p className="text-gray-500 group-hover:text-emerald-50 leading-relaxed font-medium">
-                {m.desc}
-              </p>
+              <ul className="space-y-2 text-gray-500 group-hover:text-emerald-50 leading-relaxed font-medium">
+                {m.desc.split(/\.\s+/).map(s => s.replace(/\.$/, '').trim()).filter(Boolean).map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="flex-shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover:bg-lime-300"></span>
+                    <span>{item}.</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

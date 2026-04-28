@@ -19,10 +19,11 @@
         "stat_category": "Carnes - Leches",
         "bullet1": "Calcula el costo real por litro o por kilo",
         "bullet2": "Detecta a tiempo problemas en tus cultivos o animales con ayuda de IA",
-        "bullet3": "Funciona 100% sin internet en zonas rurales"
+        "bullet3": "Funciona 100% sin internet en zonas rurales",
+        "cta_whatsapp": "Hablar por WhatsApp"
     },
     "lead_form": {
-        "page_title": "Accede a beneficios exclusivos del evento",
+        "page_title": "El control total de tu finca a un clic",
         "page_subtitle": "Déjanos tus datos y recibe información, demo y beneficios especiales de GANIA.",
         "back": "Volver al inicio",
         "name": "Nombre y apellido",
@@ -42,8 +43,8 @@
         "submit": "Quiero información",
         "privacy": "Tus datos están protegidos",
         "contact_note": "Te contactaremos por WhatsApp",
-        "success_title": "¡Gracias por registrarte!",
-        "success_text": "En breve te contactaremos por WhatsApp con tu información y beneficios exclusivos."
+        "success_title": "¡Gracias por enviar tus datos!",
+        "success_text": "Si quieres más información te invitamos a contactarnos a través de nuestro WhatsApp."
     },
     "banner": {
         "exclusive": "Exclusivo",
@@ -96,7 +97,7 @@
         "ui_status_text": "Analizando follaje..."
     },
     "dashboard": {
-        "title": "Control Total en Tiempo Real",
+        "title": "Control total en tiempo real",
         "description": "Visualiza el rendimiento de tu inversión con gráficos intuitivos y reportes generados automáticamente por nuestra IA.",
         "card1_title": "Producción Láctea",
         "card1_trend": "↑ 12% vs mes anterior",
@@ -118,7 +119,7 @@
     },
     "caribe": {
         "title_start": "Diseñada para el",
-        "title_highlight": "productor de hoy.",
+        "title_highlight": "productor de hoy",
         "description": "Desde pequeñas fincas hasta grandes operaciones, GANIA entiende tu día a día, tu entorno y los retos del campo.",
         "cta": "Hablar con un asesor",
         "cta_secondary": "Probar gratis"

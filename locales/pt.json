@@ -19,10 +19,11 @@
         "stat_category": "Carnes - Leites",
         "bullet1": "Calcule o custo real por litro ou por quilo",
         "bullet2": "Detecte a tempo problemas em suas culturas ou animais com ajuda de IA",
-        "bullet3": "Funciona 100% sem internet em zonas rurais"
+        "bullet3": "Funciona 100% sem internet em zonas rurais",
+        "cta_whatsapp": "Falar pelo WhatsApp"
     },
     "lead_form": {
-        "page_title": "Acesse benefícios exclusivos do evento",
+        "page_title": "O controle total da sua fazenda a um clique",
         "page_subtitle": "Deixe seus dados e receba informações, demo e benefícios especiais da GANIA.",
         "back": "Voltar ao início",
         "name": "Nome e sobrenome",
@@ -42,8 +43,8 @@
         "submit": "Quero informação",
         "privacy": "Seus dados estão protegidos",
         "contact_note": "Entraremos em contato pelo WhatsApp",
-        "success_title": "Obrigado por se cadastrar!",
-        "success_text": "Em breve entraremos em contato pelo WhatsApp com suas informações e benefícios exclusivos."
+        "success_title": "Obrigado por enviar seus dados!",
+        "success_text": "Se quiser mais informações, convidamos você a nos contatar pelo nosso WhatsApp."
     },
     "banner": {
         "exclusive": "Exclusivo",
@@ -96,7 +97,7 @@
         "ui_status_text": "Analisando folhagem..."
     },
     "dashboard": {
-        "title": "Controle Total em Tempo Real",
+        "title": "Controle total em tempo real",
         "description": "Visualize o desempenho do seu investimento com gráficos intuitivos e relatórios gerados automaticamente pela nossa IA.",
         "card1_title": "Produção de Leite",
         "card1_trend": "↑ 12% vs mês anterior",
@@ -118,7 +119,7 @@
     },
     "caribe": {
         "title_start": "Projetado para o",
-        "title_highlight": "produtor de hoje.",
+        "title_highlight": "produtor de hoje",
         "description": "De pequenas fazendas a grandes operações, GANIA entende seu dia a dia, seu ambiente e os desafios do campo.",
         "cta": "Falar com um consultor",
         "cta_secondary": "Testar grátis"

@@ -117,7 +117,7 @@ function App() {
               >
                 <button className="bg-lime-400 text-emerald-900 px-10 py-5 rounded-2xl font-black hover:bg-white transition-all w-full sm:w-auto">{t('caribe.cta')}</button>
               </a>
-              <a href="#registro">
+              <a href="#inicio">
                 <button className="bg-transparent text-white border-2 border-white/40 px-10 py-5 rounded-2xl font-black hover:bg-white/10 hover:border-white transition-all w-full sm:w-auto">{t('caribe.cta_secondary')}</button>
               </a>
             </div>
@@ -130,7 +130,7 @@ function App() {
             <img src={logo} width={4001} height={2250} alt="GanIA Logo" className="h-32 w-auto object-contain mx-auto shadow-xl shadow-emerald-100/50 rounded-2xl" />
             <h2 className="text-5xl font-black text-gray-900">{t('cta_final.title')}</h2>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <a href="#registro" className="bg-emerald-600 text-white px-12 py-6 rounded-[2rem] text-xl font-black hover:bg-emerald-700 transition-all shadow-3xl shadow-emerald-200">
+              <a href="#inicio" className="bg-emerald-600 text-white px-12 py-6 rounded-[2rem] text-xl font-black hover:bg-emerald-700 transition-all shadow-3xl shadow-emerald-200">
                 {t('cta_final.button')}
               </a>
             </div>

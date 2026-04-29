@@ -6,6 +6,7 @@ const LeadForm: React.FC = () => {
   const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -23,9 +24,9 @@ const LeadForm: React.FC = () => {
     e.preventDefault();
     if (submitting) return;
     setSubmitting(true);
+    setErrorMsg(null);
 
-    // Guardar en Supabase (sin redirección a WhatsApp)
-    await saveLead({
+    const result = await saveLead({
       name: form.name,
       email: form.email,
       whatsapp: form.whatsapp,
@@ -34,7 +35,15 @@ const LeadForm: React.FC = () => {
       interest: form.interest,
     });
 
-    setSubmitted(true);
+    if (result.ok) {
+      setSubmitted(true);
+    } else {
+      setErrorMsg(
+        result.error
+          ? `No pudimos guardar tus datos: ${result.error}. Verifica tu conexión e intenta de nuevo.`
+          : 'No pudimos guardar tus datos. Verifica tu conexión a internet e intenta de nuevo.'
+      );
+    }
     setSubmitting(false);
   };
 
@@ -81,6 +90,17 @@ const LeadForm: React.FC = () => {
       >
         {submitting ? '...' : t('lead_form.submit')}
       </button>
+      {errorMsg && (
+        <div
+          role="alert"
+          className="mt-2 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm flex items-start gap-2"
+        >
+          <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+          </svg>
+          <span>{errorMsg}</span>
+        </div>
+      )}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 pt-3 text-xs text-gray-500">
         <span className="flex items-center gap-1.5">
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>

@@ -3,7 +3,7 @@
         "home": "Inicio",
         "modules": "Módulos",
         "services": "Beneficios",
-        "demo": "Brochure",
+        "demo": "Servicios",
         "start_now": "Login"
     },
     "hero": {
@@ -86,7 +86,7 @@
     "vision": {
         "subtitle": "Inteligencia artificial que cuida tu finca",
         "title_start": "¿Ves un problema?",
-        "title_highlight": "GANIA te dice qué es y cómo solucionarlo.",
+        "title_highlight": "GANIA te dice qué es y cómo solucionarlo",
         "step1_title": "Captura",
         "step1_desc": "Toma una foto de la hoja o el animal afectado.",
         "step2_title": "Análisis IA",

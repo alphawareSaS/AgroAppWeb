@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { saveLead } from '../services/leadsService';
 
 const LeadForm: React.FC = () => {
   const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -17,21 +19,23 @@ const LeadForm: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const lines = [
-      'Hola, me interesa GANIA.',
-      '',
-      `Nombre: ${form.name}`,
-      `Email: ${form.email}`,
-      `WhatsApp: ${form.whatsapp}`,
-      `Ciudad/País: ${form.city}`,
-    ];
-    if (form.occupation) lines.push(`Ocupación: ${form.occupation}`);
-    if (form.interest) lines.push(`Quiere mejorar: ${form.interest}`);
-    const message = encodeURIComponent(lines.join('\n'));
-    window.open(`https://wa.me/573005487221?text=${message}`, '_blank');
+    if (submitting) return;
+    setSubmitting(true);
+
+    // Guardar en Supabase (sin redirección a WhatsApp)
+    await saveLead({
+      name: form.name,
+      email: form.email,
+      whatsapp: form.whatsapp,
+      city: form.city,
+      occupation: form.occupation,
+      interest: form.interest,
+    });
+
     setSubmitted(true);
+    setSubmitting(false);
   };
 
   if (submitted) {
@@ -52,10 +56,10 @@ const LeadForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
-      <input type="text" name="name" required value={form.name} onChange={handleChange} placeholder={t('lead_form.name')} className={inputClass} />
-      <input type="email" name="email" required value={form.email} onChange={handleChange} placeholder={t('lead_form.email')} className={inputClass} />
-      <input type="tel" name="whatsapp" required value={form.whatsapp} onChange={handleChange} placeholder={t('lead_form.whatsapp')} className={inputClass} />
-      <input type="text" name="city" required value={form.city} onChange={handleChange} placeholder={t('lead_form.city')} className={inputClass} />
+      <input type="text" name="name" value={form.name} onChange={handleChange} placeholder={t('lead_form.name')} className={inputClass} />
+      <input type="email" name="email" value={form.email} onChange={handleChange} placeholder={t('lead_form.email')} className={inputClass} />
+      <input type="tel" name="whatsapp" value={form.whatsapp} onChange={handleChange} placeholder={t('lead_form.whatsapp')} className={inputClass} />
+      <input type="text" name="city" value={form.city} onChange={handleChange} placeholder={t('lead_form.city')} className={inputClass} />
       <select name="occupation" value={form.occupation} onChange={handleChange} className={`${inputClass} text-gray-700`}>
         <option value="">{t('lead_form.occupation')}</option>
         <option value={t('lead_form.occupation_opt1')}>{t('lead_form.occupation_opt1')}</option>
@@ -70,8 +74,12 @@ const LeadForm: React.FC = () => {
         <option value={t('lead_form.interest_opt3')}>{t('lead_form.interest_opt3')}</option>
         <option value={t('lead_form.interest_opt4')}>{t('lead_form.interest_opt4')}</option>
       </select>
-      <button type="submit" className="w-full bg-emerald-600 text-white py-4 rounded-xl font-black hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-200 mt-2">
-        {t('lead_form.submit')}
+      <button
+        type="submit"
+        disabled={submitting}
+        className="w-full bg-emerald-600 text-white py-4 rounded-xl font-black hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-200 mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
+      >
+        {submitting ? '...' : t('lead_form.submit')}
       </button>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 pt-3 text-xs text-gray-500">
         <span className="flex items-center gap-1.5">

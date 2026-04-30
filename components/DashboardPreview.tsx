@@ -1,10 +1,33 @@
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { useTranslation } from 'react-i18next';
+import demoVideo from '../Imagenes/Videos/GaniaV.mp4';
 
 const DashboardPreview: React.FC = () => {
   const { t } = useTranslation();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (isVideoOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      if (videoRef.current) {
+        videoRef.current.pause();
+      }
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isVideoOpen]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsVideoOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
 
   const data = [
     { name: t('dashboard.months.jan'), ganado: 4000, cultivos: 2400 },
@@ -23,15 +46,14 @@ const DashboardPreview: React.FC = () => {
           <p className="text-emerald-100 text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
             {t('dashboard.description')}
           </p>
-          <a
-            href="https://app.ganiapp.com/login"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={() => setIsVideoOpen(true)}
             className="inline-flex items-center gap-2 bg-lime-400 text-emerald-900 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl text-sm sm:text-base font-black hover:bg-white transition-all shadow-xl"
           >
             {t('dashboard.cta_demo')}
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-          </a>
+          </button>
         </div>
 
         <div className="bg-white rounded-3xl p-4 sm:p-6 lg:p-10 shadow-2xl text-gray-900">
@@ -90,6 +112,39 @@ const DashboardPreview: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 sm:p-8"
+          onClick={() => setIsVideoOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="relative w-full max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setIsVideoOpen(false)}
+              aria-label="Close"
+              className="absolute -top-12 right-0 text-white hover:text-lime-400 transition-colors"
+            >
+              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <video
+              ref={videoRef}
+              src={demoVideo}
+              controls
+              autoPlay
+              playsInline
+              className="w-full h-auto max-h-[80vh] rounded-2xl shadow-2xl bg-black"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

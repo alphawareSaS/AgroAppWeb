@@ -73,6 +73,7 @@ const Navbar: React.FC = () => {
             <a href="#inicio" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.home')}</a>
             <a href="#modulos" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.modules')}</a>
             <a href="#beneficios" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.services')}</a>
+            <a href="#planes" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.plans')}</a>
             <a href="/Brochoure GanIA.pdf" download="Brochoure GanIA.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-emerald-600 transition-colors font-medium">{t('navbar.demo')}</a>
 
             <div className="relative border-l border-gray-200 pl-6" ref={langRef}>
@@ -129,6 +130,7 @@ const Navbar: React.FC = () => {
           <a href="#inicio" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.home')}</a>
           <a href="#modulos" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.modules')}</a>
           <a href="#beneficios" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.services')}</a>
+          <a href="#planes" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.plans')}</a>
           <a href="/Brochoure GanIA.pdf" download="Brochoure GanIA.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="block text-gray-600 font-medium">{t('navbar.demo')}</a>
 
           <div className="flex gap-2 justify-center py-2 border-t border-gray-100">

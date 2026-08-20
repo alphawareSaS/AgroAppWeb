@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Modules from './components/Modules';
 import VisionFeature from './components/VisionFeature';
 import DashboardPreview from './components/DashboardPreview';
+import Plans from './components/Plans';
 import AIAssistant from './components/AIAssistant';
 import Footer from './components/Footer';
 import InstallPWA from './components/InstallPWA';
@@ -115,6 +116,8 @@ function App() {
             </div>
           </div>
         </section>
+
+        <Plans />
 
         {/* Diseñada para el productor de hoy */}
         <section className="py-16 sm:py-24 lg:py-32 bg-emerald-950 text-white relative overflow-hidden">

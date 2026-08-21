@@ -6,18 +6,19 @@ interface PlanRow {
   animals: string;
   farms: string;
   users: string;
+  crops: string;
   monthly: string;
   annual: string;
   featured?: boolean;
 }
 
 const PLAN_ROWS: PlanRow[] = [
-  { key: 'free', animals: '30', farms: '1', users: '1', monthly: '$0', annual: '—' },
-  { key: 'basic', animals: '250', farms: '2', users: '3', monthly: '$19.900', annual: '$199.000' },
-  { key: 'finca', animals: '1.000', farms: '5', users: '6', monthly: '$39.900', annual: '$399.000', featured: true },
-  { key: 'pro', animals: '3.000', farms: '10', users: '10', monthly: '$69.900', annual: '$699.000' },
-  { key: 'hacienda', animals: '8.000', farms: '20', users: '20', monthly: '$149.900', annual: '$1.499.000' },
-  { key: 'corporate', animals: 'Ilimitado', farms: 'Ilimitado', users: 'Ilimitado', monthly: 'Cotización', annual: 'Cotización' },
+  { key: 'free', animals: '30', farms: '1', users: '1', crops: '3', monthly: '$0', annual: '—' },
+  { key: 'basic', animals: '250', farms: '2', users: '3', crops: '5', monthly: '$19.900', annual: '$199.000' },
+  { key: 'finca', animals: '1.000', farms: '5', users: '6', crops: '7', monthly: '$39.900', annual: '$399.000', featured: true },
+  { key: 'pro', animals: '3.000', farms: '10', users: '10', crops: '10', monthly: '$69.900', annual: '$699.000' },
+  { key: 'hacienda', animals: '8.000', farms: '20', users: '20', crops: '15', monthly: '$149.900', annual: '$1.499.000' },
+  { key: 'corporate', animals: 'Ilimitado', farms: 'Ilimitado', users: 'Ilimitado', crops: 'Ilimitado', monthly: 'Cotización', annual: 'Cotización' },
 ];
 
 const Plans: React.FC = () => {
@@ -40,6 +41,7 @@ const Plans: React.FC = () => {
                 <th className="py-4 px-4 sm:px-6 font-black text-sm">{t('plans.col_animals')}</th>
                 <th className="py-4 px-4 sm:px-6 font-black text-sm">{t('plans.col_farms')}</th>
                 <th className="py-4 px-4 sm:px-6 font-black text-sm">{t('plans.col_users')}</th>
+                <th className="py-4 px-4 sm:px-6 font-black text-sm">{t('plans.col_crops')}</th>
                 <th className="py-4 px-4 sm:px-6 font-black text-sm">{t('plans.col_monthly')}</th>
                 <th className="py-4 px-4 sm:px-6 font-black text-sm">{t('plans.col_annual')}</th>
               </tr>
@@ -61,6 +63,7 @@ const Plans: React.FC = () => {
                   <td className="py-4 px-4 sm:px-6 text-gray-700 font-medium">{row.animals}</td>
                   <td className="py-4 px-4 sm:px-6 text-gray-700 font-medium">{row.farms}</td>
                   <td className="py-4 px-4 sm:px-6 text-gray-700 font-medium">{row.users}</td>
+                  <td className="py-4 px-4 sm:px-6 text-gray-700 font-medium">{row.crops}</td>
                   <td className="py-4 px-4 sm:px-6 text-gray-700 font-medium">{row.monthly}</td>
                   <td className="py-4 px-4 sm:px-6 text-gray-900 font-bold">{row.annual}</td>
                 </tr>

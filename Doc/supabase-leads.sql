@@ -1,6 +1,11 @@
 -- ============================================================
 -- Tabla `leads` para captura de formulario de la landing GANIA
 -- Ejecutar en el SQL Editor de Supabase
+--
+-- Validación, normalización, autorización de datos (Ley 1581) y
+-- lectura restringida a super_admin: ver la migración
+-- GanIA/supabase/migrations/20261005_leads_validation.sql
+-- (aplicarla después de este archivo).
 -- ============================================================
 
 create table if not exists public.leads (
@@ -35,10 +40,9 @@ create policy "leads_insert_anon"
   to anon
   with check (true);
 
--- (Opcional) Permitir lectura solo a usuarios autenticados (panel admin).
+-- NO crear una política de SELECT "to authenticated using (true)":
+-- este proyecto Supabase es el mismo de la app GanIA, así que cualquier
+-- usuario registrado en la app podría leer nombre, correo y celular de
+-- todos los leads. La lectura queda solo para super_admin en
+-- 20261005_leads_validation.sql.
 drop policy if exists "leads_select_authenticated" on public.leads;
-create policy "leads_select_authenticated"
-  on public.leads
-  for select
-  to authenticated
-  using (true);

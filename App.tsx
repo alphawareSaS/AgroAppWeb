@@ -6,7 +6,7 @@ import Modules from './components/Modules';
 import VisionFeature from './components/VisionFeature';
 import DashboardPreview from './components/DashboardPreview';
 import Plans from './components/Plans';
-import AIAssistant from './components/AIAssistant';
+import WhatsAppButton from './components/WhatsAppButton';
 import Footer from './components/Footer';
 import InstallPWA from './components/InstallPWA';
 import LeadFormPage from './components/LeadFormPage';
@@ -74,7 +74,7 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-4 text-center">
             <span className="bg-lime-400 text-emerald-950 text-[10px] font-black uppercase px-2 py-1 rounded-md">{t('banner.exclusive')}</span>
             <p className="text-emerald-50 font-bold">{t('banner.text')}</p>
-            <a href="#" className="text-lime-400 font-black border-b border-lime-400 hover:text-white hover:border-white transition-all text-sm">{t('banner.link')}</a>
+            <a href="#modulos" className="text-lime-400 font-black border-b border-lime-400 hover:text-white hover:border-white transition-all text-sm">{t('banner.link')}</a>
           </div>
         </div>
 
@@ -157,7 +157,7 @@ function App() {
       </main>
 
       <Footer />
-      <AIAssistant />
+      <WhatsAppButton />
       <InstallPWA />
       <Analytics />
     </div>

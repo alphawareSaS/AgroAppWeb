@@ -14,14 +14,15 @@
         "description": "GANIA es una plataforma que te ayuda a saber cuánto produces, cuánto gastas y qué mejorar en tu finca, desde cualquier lugar.",
         "cta_start": "Quiero información",
         "cta_modules": "Ver Módulos",
-        "stat_offline": "Offline-First",
+        "stat_offline": "Registro sin señal",
         "stat_producers": "Productores",
         "stat_roi": "ROI Proyectado",
         "stat_category": "Carnes - Leches",
         "bullet1": "Calcula el costo real por litro o por kilo",
         "bullet2": "Detecta a tiempo problemas en tus cultivos o animales con ayuda de IA",
-        "bullet3": "Funciona 100% sin internet en zonas rurales",
-        "cta_whatsapp": "Hablar por WhatsApp"
+        "bullet3": "Registra en el potrero sin señal: se sincroniza cuando vuelve el internet",
+        "cta_whatsapp": "Hablar por WhatsApp",
+        "stat_offline_value": "Offline"
     },
     "lead_form": {
         "page_title": "El control total de tu finca a un clic",
@@ -63,7 +64,7 @@
     },
     "banner": {
         "exclusive": "Exclusivo",
-        "text": "Sin Internet, sin problemas. GanIA funciona 100% offline-first en el campo.",
+        "text": "Sin señal en el potrero, sin problema: registra y GanIA sincroniza cuando vuelve el internet.",
         "link": "Aprender cómo funciona"
     },
     "benefits": {
@@ -86,9 +87,9 @@
         "m1_tag1": "Trazabilidad",
         "m1_tag2": "Leche/Carne",
         "m2_title": "Gestión por Lotes",
-        "m2_desc": "Mapeo satelital de cultivos. Seguimiento de ocupación, planificación de siembra y cálculo de cosecha estimada.",
+        "m2_desc": "Dibuja tus potreros y lotes en el mapa. Seguimiento de ocupación, planificación de siembra y cálculo de cosecha estimada. Monitoreo satelital: próximamente.",
         "m2_tag1": "Agricultura",
-        "m2_tag2": "GIS",
+        "m2_tag2": "Mapas",
         "m3_title": "Centro de Costos",
         "m3_desc": "Control financiero real. Conoce la rentabilidad (ROI) exacta por cada animal o por cada lote de cultivo.",
         "m3_tag1": "Finanzas",
@@ -101,23 +102,23 @@
     "vision": {
         "subtitle": "Inteligencia artificial que cuida tu finca",
         "title_start": "¿Ves un problema?",
-        "title_highlight": "GANIA te dice qué es y cómo solucionarlo",
-        "step1_title": "Captura",
-        "step1_desc": "Toma una foto de la hoja o el animal afectado.",
+        "title_highlight": "Cuéntaselo a GanIA y recibe orientación al instante",
+        "step1_title": "Describe",
+        "step1_desc": "Escríbele al asistente lo que ves: síntomas, desde cuándo y qué animal o lote.",
         "step2_title": "Análisis IA",
-        "step2_desc": "GanIA procesa la imagen buscando patrones de plagas o deficiencias.",
-        "step3_title": "Tratamiento",
-        "step3_desc": "Recibe una recomendación inmediata y guarda el reporte en tu historial.",
-        "ui_status_title": "Diagnóstico en curso",
-        "ui_status_text": "Analizando follaje..."
+        "step2_desc": "GanIA cruza tu descripción con los datos de tu finca: historial sanitario, vacunas, producción y lotes.",
+        "step3_title": "Recomendación",
+        "step3_desc": "Recibe orientación inmediata y queda guardada en tu historial. Ante signos graves, llama al veterinario.",
+        "ui_status_title": "Consultando tu finca",
+        "ui_status_text": "Revisando el historial..."
     },
     "dashboard": {
         "title": "Control total en tiempo real",
-        "description": "Visualiza el rendimiento de tu inversión con gráficos intuitivos y reportes generados automáticamente por nuestra IA.",
+        "description": "Visualiza el rendimiento de tu inversión con gráficos intuitivos y reportes automáticos.",
         "card1_title": "Producción Láctea",
         "card1_trend": "↑ 12% vs mes anterior",
-        "card2_title": "Salud Cultivos (NDVI)",
-        "card2_status": "Estado: Excelente",
+        "card2_title": "Estado de cultivos",
+        "card2_status": "Estado: Estable",
         "card3_title": "Inventario Alimento",
         "card3_status": "Reordenar en 5 días",
         "legend_cattle": "Rendimiento Ganadero",
@@ -160,8 +161,7 @@
         "note_annual": "Los planes se pagan una vez al año, sin cobros mensuales ni renovación automática.",
         "note_hectares": "El mismo plan cubre hectáreas de cultivo si su finca es mixta.",
         "addons_title": "Adicionales",
-        "addon_users": "Usuarios adicionales: $9.900 al mes",
-        "addon_farms": "Finca o lote adicional: $19.900 al mes",
+        "addon_users": "Usuarios o fincas adicionales: escríbenos por WhatsApp y te cotizamos.",
         "optional_title": "Servicios opcionales",
         "optional_ai_upload": "Carga masiva con IA: incluida en todos los planes",
         "optional_digitization": "Digitalización de cuadernos: desde $200.000",
@@ -202,5 +202,10 @@
         "privacy": "Privacidad",
         "terms": "Términos",
         "cookies": "Cookies"
+    },
+    "whatsapp_float": {
+        "label": "Escríbenos por WhatsApp",
+        "cta": "¿Dudas? Escríbenos",
+        "message": "Hola, quiero más información sobre GanIA"
     }
 }

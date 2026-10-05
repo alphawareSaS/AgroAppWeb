@@ -14,14 +14,15 @@
         "description": "GANIA é uma plataforma que te ajuda a saber quanto você produz, quanto gasta e o que melhorar na sua fazenda, de qualquer lugar.",
         "cta_start": "Quero informação",
         "cta_modules": "Ver Módulos",
-        "stat_offline": "Offline-First",
+        "stat_offline": "Registro sem sinal",
         "stat_producers": "Produtores",
         "stat_roi": "ROI Projetado",
         "stat_category": "Carnes - Leites",
         "bullet1": "Calcule o custo real por litro ou por quilo",
         "bullet2": "Detecte a tempo problemas em suas culturas ou animais com ajuda de IA",
-        "bullet3": "Funciona 100% sem internet em zonas rurais",
-        "cta_whatsapp": "Falar pelo WhatsApp"
+        "bullet3": "Registre no pasto sem sinal: sincroniza quando a internet voltar",
+        "cta_whatsapp": "Falar pelo WhatsApp",
+        "stat_offline_value": "Offline"
     },
     "lead_form": {
         "page_title": "O controle total da sua fazenda a um clique",
@@ -63,7 +64,7 @@
     },
     "banner": {
         "exclusive": "Exclusivo",
-        "text": "Sem Internet, sem problemas. GanIA funciona 100% offline-first no campo.",
+        "text": "Sem sinal no pasto, sem problema: registre e a GanIA sincroniza quando a internet voltar.",
         "link": "Saiba como funciona"
     },
     "benefits": {
@@ -86,9 +87,9 @@
         "m1_tag1": "Rastreabilidade",
         "m1_tag2": "Leite/Carne",
         "m2_title": "Gestão por Lotes",
-        "m2_desc": "Mapeamento de culturas por satélite. Rastreamento de ocupação, planejamento de plantio e cálculo de colheita estimada.",
+        "m2_desc": "Desenhe seus pastos e lotes no mapa. Acompanhamento de ocupação, planejamento de plantio e cálculo de colheita estimada. Monitoramento por satélite: em breve.",
         "m2_tag1": "Agricultura",
-        "m2_tag2": "GIS",
+        "m2_tag2": "Mapas",
         "m3_title": "Centro de Custos",
         "m3_desc": "Controle financeiro real. Conheça o ROI exato para cada animal ou lote de cultura.",
         "m3_tag1": "Finanças",
@@ -100,24 +101,24 @@
     },
     "vision": {
         "subtitle": "Inteligência artificial que cuida da sua fazenda",
-        "title_start": "Vê um problema?",
-        "title_highlight": "GANIA diz o que é e como resolver.",
-        "step1_title": "Captura",
-        "step1_desc": "Tire uma foto da folha ou animal afetado.",
+        "title_start": "Viu um problema?",
+        "title_highlight": "Conte para a GanIA e receba orientação na hora",
+        "step1_title": "Descreva",
+        "step1_desc": "Escreva para o assistente o que você vê: sintomas, desde quando e qual animal ou lote.",
         "step2_title": "Análise IA",
-        "step2_desc": "GanIA processa a imagem procurando padrões de pragas ou deficiências.",
-        "step3_title": "Tratamento",
-        "step3_desc": "Receba uma recomendação imediata e salve o relatório em seu histórico.",
-        "ui_status_title": "Diagnóstico em andamento",
-        "ui_status_text": "Analisando folhagem..."
+        "step2_desc": "A GanIA cruza sua descrição com os dados da sua fazenda: histórico sanitário, vacinas, produção e lotes.",
+        "step3_title": "Recomendação",
+        "step3_desc": "Receba orientação imediata, salva no seu histórico. Diante de sinais graves, chame o veterinário.",
+        "ui_status_title": "Consultando sua fazenda",
+        "ui_status_text": "Revisando o histórico..."
     },
     "dashboard": {
         "title": "Controle total em tempo real",
-        "description": "Visualize o desempenho do seu investimento com gráficos intuitivos e relatórios gerados automaticamente pela nossa IA.",
+        "description": "Visualize o desempenho do seu investimento com gráficos intuitivos e relatórios automáticos.",
         "card1_title": "Produção de Leite",
         "card1_trend": "↑ 12% vs mês anterior",
-        "card2_title": "Saúde das Culturas (NDVI)",
-        "card2_status": "Status: Excelente",
+        "card2_title": "Estado dos cultivos",
+        "card2_status": "Estado: Estável",
         "card3_title": "Estoque de Ração",
         "card3_status": "Reordenar em 5 dias",
         "legend_cattle": "Desempenho Pecuário",
@@ -160,8 +161,7 @@
         "note_annual": "Os planos são pagos uma vez por ano, sem cobranças mensais nem renovação automática.",
         "note_hectares": "O mesmo plano cobre hectares de cultivo se sua fazenda for mista.",
         "addons_title": "Adicionais",
-        "addon_users": "Usuários adicionais: $9.900 COP/mês",
-        "addon_farms": "Fazenda ou lote adicional: $19.900 COP/mês",
+        "addon_users": "Usuários ou fazendas adicionais: fale conosco pelo WhatsApp e fazemos a cotação.",
         "optional_title": "Serviços opcionais",
         "optional_ai_upload": "Carga em massa com IA: incluída em todos os planos",
         "optional_digitization": "Digitalização de cadernos: a partir de $200.000 COP",
@@ -202,5 +202,10 @@
         "privacy": "Privacidade",
         "terms": "Termos",
         "cookies": "Cookies"
+    },
+    "whatsapp_float": {
+        "label": "Fale conosco pelo WhatsApp",
+        "cta": "Dúvidas? Fale conosco",
+        "message": "Olá, quero mais informações sobre a GanIA"
     }
 }

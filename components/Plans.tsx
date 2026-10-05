@@ -88,8 +88,16 @@ const Plans: React.FC = () => {
           <div className="bg-white rounded-2xl border border-gray-200 p-6">
             <h4 className="font-black text-gray-900 mb-3">{t('plans.addons_title')}</h4>
             <ul className="space-y-1 text-gray-600 text-sm font-medium">
-              <li>{t('plans.addon_users')}</li>
-              <li>{t('plans.addon_farms')}</li>
+              <li>
+                <a
+                  href="https://wa.me/573005487221?text=Hola,%20quiero%20cotizar%20usuarios%20o%20fincas%20adicionales%20en%20GanIA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-700 font-bold hover:underline"
+                >
+                  {t('plans.addon_users')}
+                </a>
+              </li>
             </ul>
           </div>
           <div className="bg-white rounded-2xl border border-gray-200 p-6">

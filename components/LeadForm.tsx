@@ -10,6 +10,7 @@ import {
   normalizePhone,
   saveLead,
 } from '../services/leadsService';
+import TurnstileWidget, { TURNSTILE_SITE_KEY } from './TurnstileWidget';
 
 const DIAL_CODES: { country: string; code: string }[] = [
   { country: 'CO', code: '+57' },
@@ -45,6 +46,8 @@ const LeadForm: React.FC = () => {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const startedAt = useRef(Date.now());
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaResetKey, setCaptchaResetKey] = useState(0);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -93,6 +96,11 @@ const LeadForm: React.FC = () => {
     setFieldErrors(errors);
     if (Object.keys(errors).length > 0 || !phone) return;
 
+    if (TURNSTILE_SITE_KEY && !captchaToken) {
+      setErrorMsg(t('lead_form.errors.captcha'));
+      return;
+    }
+
     setSubmitting(true);
     const result = await saveLead({
       name: form.name,
@@ -103,12 +111,17 @@ const LeadForm: React.FC = () => {
       interest: form.interest,
       privacyConsent: form.consent,
       lang: i18n.language,
+      turnstileToken: captchaToken ?? undefined,
     });
 
     if (result.ok) {
       setSubmitted(true);
     } else {
-      setErrorMsg(result.errorCode === 'invalid' ? t('lead_form.errors.invalid') : t('lead_form.errors.network'));
+      const key =
+        result.errorCode === 'invalid' ? 'invalid' : result.errorCode === 'captcha' ? 'captcha' : 'network';
+      setErrorMsg(t(`lead_form.errors.${key}`));
+      // Los tokens de Turnstile son de un solo uso: pedir uno nuevo para reintentar.
+      if (TURNSTILE_SITE_KEY) setCaptchaResetKey((k) => k + 1);
     }
     setSubmitting(false);
   };
@@ -191,6 +204,7 @@ const LeadForm: React.FC = () => {
         </label>
         {renderError('consent')}
       </div>
+      {TURNSTILE_SITE_KEY && <TurnstileWidget onToken={setCaptchaToken} resetKey={captchaResetKey} />}
       <button
         type="submit"
         disabled={submitting}

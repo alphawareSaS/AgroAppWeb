@@ -57,7 +57,8 @@
             "city": "Enter your city.",
             "consent": "We need your authorization to contact you.",
             "invalid": "Some details are not valid. Please check them and try again.",
-            "network": "We could not send your details. Check your connection and try again, or message us on WhatsApp."
+            "network": "We could not send your details. Check your connection and try again, or message us on WhatsApp.",
+            "captcha": "We couldn't verify you're not a robot. Wait a few seconds and try again."
         }
     },
     "banner": {
@@ -133,7 +134,7 @@
     },
     "about": {
         "title": "What is GanIA?",
-        "p1": "GanIA is a web software and mobile app for intelligent agricultural and livestock management, designed to modernize and optimize the administration of farms, crops, and livestock operations through digital technology. Available on Android, iOS, and the web, it centralizes all field information in one place, simplifying production control, traceability, and real-time data-driven decision making—even offline.",
+        "p1": "GanIA is a web software and mobile app for intelligent agricultural and livestock management, designed to modernize and optimize the administration of farms, crops, and livestock operations through digital technology. Available on Android and the web (iOS coming soon), it centralizes all field information in one place, simplifying production control, traceability, and real-time data-driven decision making—even offline.",
         "p2": "With GanIA, producers and agribusinesses can manage both agricultural production and livestock, including animal control, health records, feeding, reproduction, inventories, and herd productivity. It also integrates monitoring, analytics, and automation tools that reduce costs, improve operational efficiency, and maximize profitability.",
         "p3": "Its approach combines digital agriculture, smart livestock farming, and data analytics, delivering a complete, accessible, and scalable solution for the rural sector.",
         "p4": "Ideal for farms, ranchers, growers, and companies looking to transform their operation with technology, improve resource control, and boost productivity in the field."
@@ -147,8 +148,8 @@
         "col_farms": "Farms",
         "col_users": "Users",
         "col_crops": "Crops",
-        "col_monthly": "Monthly",
-        "col_annual": "Annual",
+        "col_monthly": "Per month equivalent",
+        "col_annual": "Annual payment",
         "name_free": "Free",
         "name_basic": "Basic",
         "name_finca": "Farm",
@@ -156,7 +157,7 @@
         "name_hacienda": "Ranch",
         "name_corporate": "Corporate",
         "most_requested": "Most popular",
-        "note_annual": "The annual plan is equivalent to ten months: two months free for paying upfront.",
+        "note_annual": "Plans are paid once a year, with no monthly charges or automatic renewal.",
         "note_hectares": "The same plan covers crop hectares if your farm is mixed.",
         "addons_title": "Add-ons",
         "addon_users": "Extra users: $9,900 COP/month",
@@ -167,7 +168,9 @@
         "optional_training": "On-site training: from $250,000 COP",
         "optional_support": "Priority support: $49,900 COP/month",
         "cta_start": "Try it free",
-        "cta_quote": "Get a Corporate quote"
+        "cta_quote": "Get a Corporate quote",
+        "free_price": "Free",
+        "quote": "Quote"
     },
     "caribe": {
         "title_start": "Designed for",

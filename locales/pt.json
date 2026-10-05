@@ -57,7 +57,8 @@
             "city": "Informe sua cidade.",
             "consent": "Precisamos da sua autorização para entrar em contato.",
             "invalid": "Alguns dados não são válidos. Revise e tente novamente.",
-            "network": "Não conseguimos enviar seus dados. Verifique sua conexão e tente novamente, ou fale conosco pelo WhatsApp."
+            "network": "Não conseguimos enviar seus dados. Verifique sua conexão e tente novamente, ou fale conosco pelo WhatsApp.",
+            "captcha": "Não conseguimos verificar que você não é um robô. Aguarde alguns segundos e tente novamente."
         }
     },
     "banner": {
@@ -133,7 +134,7 @@
     },
     "about": {
         "title": "O que é o GanIA?",
-        "p1": "GanIA é um software web e um app móvel de gestão agrícola e pecuária inteligente, projetado para modernizar e otimizar a administração de fazendas, cultivos e explorações pecuárias por meio de tecnologia digital. Disponível em Android, iOS e navegador, centraliza todas as informações do campo em um só lugar, facilitando o controle dos processos produtivos, a rastreabilidade e a tomada de decisões baseada em dados em tempo real, mesmo sem conexão com a internet.",
+        "p1": "GanIA é um software web e um app móvel de gestão agrícola e pecuária inteligente, projetado para modernizar e otimizar a administração de fazendas, cultivos e explorações pecuárias por meio de tecnologia digital. Disponível em Android e navegador (iOS em breve), centraliza todas as informações do campo em um só lugar, facilitando o controle dos processos produtivos, a rastreabilidade e a tomada de decisões baseada em dados em tempo real, mesmo sem conexão com a internet.",
         "p2": "Com o GanIA, produtores e empresas agropecuárias podem gerenciar tanto a produção agrícola quanto a pecuária, incluindo controle de animais, registros sanitários, alimentação, reprodução, estoques e produtividade do rebanho. Integra ainda ferramentas de monitoramento, análise e automação que ajudam a reduzir custos, melhorar a eficiência operacional e maximizar a rentabilidade.",
         "p3": "Sua abordagem combina agricultura digital, pecuária inteligente e analítica de dados, oferecendo uma solução completa, acessível e escalável para o setor rural.",
         "p4": "Ideal para fazendas, pecuaristas, agricultores e empresas que buscam transformar sua operação com tecnologia, melhorar o controle de recursos e aumentar a produtividade do campo."
@@ -147,8 +148,8 @@
         "col_farms": "Fazendas",
         "col_users": "Usuários",
         "col_crops": "Cultivos",
-        "col_monthly": "Por mês",
-        "col_annual": "Por ano",
+        "col_monthly": "Equivale por mês",
+        "col_annual": "Pagamento anual",
         "name_free": "Gratuito",
         "name_basic": "Básico",
         "name_finca": "Fazenda",
@@ -156,7 +157,7 @@
         "name_hacienda": "Hacienda",
         "name_corporate": "Corporativo",
         "most_requested": "O mais pedido",
-        "note_annual": "O plano anual equivale a dez meses: dois meses de brinde por pagar adiantado.",
+        "note_annual": "Os planos são pagos uma vez por ano, sem cobranças mensais nem renovação automática.",
         "note_hectares": "O mesmo plano cobre hectares de cultivo se sua fazenda for mista.",
         "addons_title": "Adicionais",
         "addon_users": "Usuários adicionais: $9.900 COP/mês",
@@ -167,7 +168,9 @@
         "optional_training": "Treinamento presencial na fazenda: a partir de $250.000 COP",
         "optional_support": "Suporte prioritário: $49.900 COP/mês",
         "cta_start": "Experimente grátis",
-        "cta_quote": "Cotar plano Corporativo"
+        "cta_quote": "Cotar plano Corporativo",
+        "free_price": "Grátis",
+        "quote": "Cotação"
     },
     "caribe": {
         "title_start": "Projetado para o",

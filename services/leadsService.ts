@@ -25,9 +25,11 @@ export interface LeadPayload {
   interest?: InterestCode | '';
   privacyConsent: boolean;
   lang?: string;
+  /** Token de Cloudflare Turnstile; si viene, el lead va por la Edge Function submit_lead. */
+  turnstileToken?: string;
 }
 
-export type SaveLeadErrorCode = 'not_configured' | 'invalid' | 'network';
+export type SaveLeadErrorCode = 'not_configured' | 'invalid' | 'captcha' | 'network';
 
 export interface SaveLeadResult {
   ok: boolean;
@@ -114,6 +116,10 @@ export async function saveLead(payload: LeadPayload): Promise<SaveLeadResult> {
     lang: payload.lang?.slice(0, 10) || null,
   };
 
+  if (payload.turnstileToken) {
+    return saveLeadViaEdgeFunction({ ...withConsent, turnstile_token: payload.turnstileToken });
+  }
+
   try {
     let { error } = await supabase.from('leads').insert(withConsent);
 
@@ -136,6 +142,37 @@ export async function saveLead(payload: LeadPayload): Promise<SaveLeadResult> {
     const message = err instanceof Error ? err.message : 'Error desconocido';
     // eslint-disable-next-line no-console
     console.error('[Supabase] Excepción guardando lead:', message);
+    return { ok: false, errorCode: 'network' };
+  }
+}
+
+/**
+ * Envío protegido con Turnstile: la Edge Function verifica el token con
+ * Cloudflare antes de insertar. Es el camino cuando hay VITE_TURNSTILE_SITE_KEY.
+ */
+async function saveLeadViaEdgeFunction(body: Record<string, unknown>): Promise<SaveLeadResult> {
+  if (!supabase) return { ok: false, errorCode: 'not_configured' };
+  try {
+    const { error } = await supabase.functions.invoke('submit_lead', { body });
+    if (!error) return { ok: true };
+
+    let code = '';
+    const context = (error as { context?: unknown }).context;
+    if (context instanceof Response) {
+      try {
+        code = (await context.json())?.code ?? '';
+      } catch {
+        // respuesta sin JSON: se trata como error de red
+      }
+    }
+    // eslint-disable-next-line no-console
+    console.error('[submit_lead] Error:', code || error.message);
+    if (code === 'invalid') return { ok: false, errorCode: 'invalid' };
+    if (code === 'captcha_failed') return { ok: false, errorCode: 'captcha' };
+    return { ok: false, errorCode: 'network' };
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error('[submit_lead] Excepción:', err instanceof Error ? err.message : err);
     return { ok: false, errorCode: 'network' };
   }
 }

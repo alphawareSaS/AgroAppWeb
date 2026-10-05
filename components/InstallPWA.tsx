@@ -9,7 +9,7 @@ const InstallPWA = () => {
 
     return (
         <>
-            <div className="fixed bottom-4 right-4 z-50 flex items-center gap-3 animate-fade-in-up">
+            <div className="fixed bottom-4 left-4 z-50 flex items-center gap-3 animate-fade-in-up">
                 <a
                     href="https://www.instagram.com/ganiaapp"
                     target="_blank"

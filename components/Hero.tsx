@@ -100,7 +100,7 @@ const Hero: React.FC = () => {
 
             <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-10 pt-4 opacity-70">
               <div className="flex flex-col">
-                <span className="text-3xl font-black text-emerald-900">100%</span>
+                <span className="text-3xl font-black text-emerald-900">{t('hero.stat_offline_value')}</span>
                 <span className="text-xs uppercase tracking-widest font-bold text-gray-400">{t('hero.stat_offline')}</span>
               </div>
               <div className="w-px h-10 bg-gray-200"></div>

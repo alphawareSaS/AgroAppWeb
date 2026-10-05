@@ -21,7 +21,7 @@ i18n
         },
         detection: {
             order: ['querystring', 'localStorage', 'navigator'],
-            lookupQuerystring: 'lang',
+            lookupQuerystring: 'lng', // coincide con hreflang (?lng=en) de index.html y sitemap.xml
             lookupLocalStorage: 'i18nextLng',
             caches: ['localStorage']
         }

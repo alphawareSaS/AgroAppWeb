@@ -1,48 +1,127 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { saveLead } from '../services/leadsService';
+import {
+  INTEREST_CODES,
+  OCCUPATION_CODES,
+  InterestCode,
+  OccupationCode,
+  isValidEmail,
+  isValidName,
+  normalizePhone,
+  saveLead,
+} from '../services/leadsService';
+import TurnstileWidget, { TURNSTILE_SITE_KEY } from './TurnstileWidget';
+
+const DIAL_CODES: { country: string; code: string }[] = [
+  { country: 'CO', code: '+57' },
+  { country: 'EC', code: '+593' },
+  { country: 'PE', code: '+51' },
+  { country: 'VE', code: '+58' },
+  { country: 'PA', code: '+507' },
+  { country: 'MX', code: '+52' },
+  { country: 'CR', code: '+506' },
+  { country: 'GT', code: '+502' },
+  { country: 'HN', code: '+504' },
+  { country: 'NI', code: '+505' },
+  { country: 'SV', code: '+503' },
+  { country: 'BO', code: '+591' },
+  { country: 'PY', code: '+595' },
+  { country: 'AR', code: '+54' },
+  { country: 'CL', code: '+56' },
+  { country: 'UY', code: '+598' },
+  { country: 'BR', code: '+55' },
+  { country: 'US', code: '+1' },
+  { country: 'ES', code: '+34' },
+];
+
+// Un humano tarda más que esto en llenar el formulario; un bot no.
+const MIN_FILL_MS = 2500;
+
+type FieldErrors = Partial<Record<'name' | 'whatsapp' | 'email' | 'city' | 'consent', string>>;
 
 const LeadForm: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const startedAt = useRef(Date.now());
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaResetKey, setCaptchaResetKey] = useState(0);
   const [form, setForm] = useState({
     name: '',
     email: '',
+    dialCode: '+57',
     whatsapp: '',
     city: '',
-    occupation: '',
-    interest: '',
+    occupation: '' as OccupationCode | '',
+    interest: '' as InterestCode | '',
+    consent: false,
+    website: '', // honeypot: invisible para personas, los bots lo llenan
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    const next = e.target instanceof HTMLInputElement && e.target.type === 'checkbox' ? e.target.checked : value;
+    setForm({ ...form, [name]: next });
+    if (fieldErrors[name as keyof FieldErrors]) {
+      setFieldErrors({ ...fieldErrors, [name]: undefined });
+    }
+  };
+
+  const validate = (): { errors: FieldErrors; phone: string | null } => {
+    const errors: FieldErrors = {};
+    const phone = normalizePhone(form.whatsapp, form.dialCode);
+    if (!isValidName(form.name)) errors.name = t('lead_form.errors.name');
+    if (!phone) errors.whatsapp = t('lead_form.errors.whatsapp');
+    if (form.email.trim() && !isValidEmail(form.email)) errors.email = t('lead_form.errors.email');
+    const city = form.city.trim();
+    if (city.length < 2 || city.length > 120) errors.city = t('lead_form.errors.city');
+    if (!form.consent) errors.consent = t('lead_form.errors.consent');
+    return { errors, phone };
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (submitting) return;
-    setSubmitting(true);
     setErrorMsg(null);
 
+    // Bots: honeypot lleno o envío instantáneo. Se simula éxito para no darles pistas.
+    if (form.website || Date.now() - startedAt.current < MIN_FILL_MS) {
+      setSubmitted(true);
+      return;
+    }
+
+    const { errors, phone } = validate();
+    setFieldErrors(errors);
+    if (Object.keys(errors).length > 0 || !phone) return;
+
+    if (TURNSTILE_SITE_KEY && !captchaToken) {
+      setErrorMsg(t('lead_form.errors.captcha'));
+      return;
+    }
+
+    setSubmitting(true);
     const result = await saveLead({
       name: form.name,
       email: form.email,
-      whatsapp: form.whatsapp,
+      whatsapp: phone,
       city: form.city,
       occupation: form.occupation,
       interest: form.interest,
+      privacyConsent: form.consent,
+      lang: i18n.language,
+      turnstileToken: captchaToken ?? undefined,
     });
 
     if (result.ok) {
       setSubmitted(true);
     } else {
-      setErrorMsg(
-        result.error
-          ? `No pudimos guardar tus datos: ${result.error}. Verifica tu conexión e intenta de nuevo.`
-          : 'No pudimos guardar tus datos. Verifica tu conexión a internet e intenta de nuevo.'
-      );
+      const key =
+        result.errorCode === 'invalid' ? 'invalid' : result.errorCode === 'captcha' ? 'captcha' : 'network';
+      setErrorMsg(t(`lead_form.errors.${key}`));
+      // Los tokens de Turnstile son de un solo uso: pedir uno nuevo para reintentar.
+      if (TURNSTILE_SITE_KEY) setCaptchaResetKey((k) => k + 1);
     }
     setSubmitting(false);
   };
@@ -62,27 +141,70 @@ const LeadForm: React.FC = () => {
   }
 
   const inputClass = "w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition-all";
+  const errorClass = 'border-red-400 bg-red-50';
+  const renderError = (field: keyof FieldErrors) =>
+    fieldErrors[field] ? (
+      <p id={`lead-${field}-error`} className="text-xs text-red-600 mt-1 px-1">{fieldErrors[field]}</p>
+    ) : null;
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3">
-      <input type="text" name="name" value={form.name} onChange={handleChange} placeholder={t('lead_form.name')} className={inputClass} />
-      <input type="email" name="email" value={form.email} onChange={handleChange} placeholder={t('lead_form.email')} className={inputClass} />
-      <input type="tel" name="whatsapp" value={form.whatsapp} onChange={handleChange} placeholder={t('lead_form.whatsapp')} className={inputClass} />
-      <input type="text" name="city" value={form.city} onChange={handleChange} placeholder={t('lead_form.city')} className={inputClass} />
+    <form onSubmit={handleSubmit} className="space-y-3" noValidate>
+      <div>
+        <input type="text" name="name" value={form.name} onChange={handleChange} placeholder={t('lead_form.name')} autoComplete="name" maxLength={120} required aria-invalid={!!fieldErrors.name} aria-describedby={fieldErrors.name ? 'lead-name-error' : undefined} className={`${inputClass} ${fieldErrors.name ? errorClass : ''}`} />
+        {renderError('name')}
+      </div>
+      <div>
+        <div className="flex gap-2">
+          <select name="dialCode" value={form.dialCode} onChange={handleChange} aria-label={t('lead_form.dial_code')} className={`${inputClass} w-28 flex-shrink-0 text-gray-700`}>
+            {DIAL_CODES.map((d) => (
+              <option key={d.country} value={d.code}>{`${d.country} ${d.code}`}</option>
+            ))}
+          </select>
+          <input type="tel" name="whatsapp" value={form.whatsapp} onChange={handleChange} placeholder={t('lead_form.whatsapp')} autoComplete="tel-national" inputMode="tel" maxLength={20} required aria-invalid={!!fieldErrors.whatsapp} aria-describedby={fieldErrors.whatsapp ? 'lead-whatsapp-error' : undefined} className={`${inputClass} ${fieldErrors.whatsapp ? errorClass : ''}`} />
+        </div>
+        {renderError('whatsapp')}
+      </div>
+      <div>
+        <input type="email" name="email" value={form.email} onChange={handleChange} placeholder={t('lead_form.email')} autoComplete="email" maxLength={254} aria-invalid={!!fieldErrors.email} aria-describedby={fieldErrors.email ? 'lead-email-error' : undefined} className={`${inputClass} ${fieldErrors.email ? errorClass : ''}`} />
+        {renderError('email')}
+      </div>
+      <div>
+        <input type="text" name="city" value={form.city} onChange={handleChange} placeholder={t('lead_form.city')} autoComplete="address-level2" maxLength={120} required aria-invalid={!!fieldErrors.city} aria-describedby={fieldErrors.city ? 'lead-city-error' : undefined} className={`${inputClass} ${fieldErrors.city ? errorClass : ''}`} />
+        {renderError('city')}
+      </div>
       <select name="occupation" value={form.occupation} onChange={handleChange} className={`${inputClass} text-gray-700`}>
         <option value="">{t('lead_form.occupation')}</option>
-        <option value={t('lead_form.occupation_opt1')}>{t('lead_form.occupation_opt1')}</option>
-        <option value={t('lead_form.occupation_opt2')}>{t('lead_form.occupation_opt2')}</option>
-        <option value={t('lead_form.occupation_opt3')}>{t('lead_form.occupation_opt3')}</option>
-        <option value={t('lead_form.occupation_opt4')}>{t('lead_form.occupation_opt4')}</option>
+        {OCCUPATION_CODES.map((code) => (
+          <option key={code} value={code}>{t(`lead_form.occupation_${code}`)}</option>
+        ))}
       </select>
       <select name="interest" value={form.interest} onChange={handleChange} className={`${inputClass} text-gray-700`}>
         <option value="">{t('lead_form.interest')}</option>
-        <option value={t('lead_form.interest_opt1')}>{t('lead_form.interest_opt1')}</option>
-        <option value={t('lead_form.interest_opt2')}>{t('lead_form.interest_opt2')}</option>
-        <option value={t('lead_form.interest_opt3')}>{t('lead_form.interest_opt3')}</option>
-        <option value={t('lead_form.interest_opt4')}>{t('lead_form.interest_opt4')}</option>
+        {INTEREST_CODES.map((code) => (
+          <option key={code} value={code}>{t(`lead_form.interest_${code}`)}</option>
+        ))}
       </select>
+      {/* Honeypot anti-bots: fuera de pantalla y fuera del orden de tabulación */}
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
+        <label>
+          Website
+          <input type="text" name="website" value={form.website} onChange={handleChange} tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
+      <div>
+        <label className="flex items-start gap-3 text-xs text-gray-600 leading-relaxed px-1 pt-1 cursor-pointer">
+          <input type="checkbox" name="consent" checked={form.consent} onChange={handleChange} required aria-invalid={!!fieldErrors.consent} aria-describedby={fieldErrors.consent ? 'lead-consent-error' : undefined} className="mt-0.5 h-4 w-4 flex-shrink-0 accent-emerald-600" />
+          <span>
+            {t('lead_form.consent_text')}{' '}
+            <a href="/aviso-de-privacidad.html" target="_blank" rel="noopener noreferrer" className="font-bold text-emerald-700 underline">
+              {t('lead_form.consent_link')}
+            </a>
+            .
+          </span>
+        </label>
+        {renderError('consent')}
+      </div>
+      {TURNSTILE_SITE_KEY && <TurnstileWidget onToken={setCaptchaToken} resetKey={captchaResetKey} />}
       <button
         type="submit"
         disabled={submitting}

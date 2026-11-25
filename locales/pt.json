@@ -24,6 +24,12 @@
         "cta_whatsapp": "Falar pelo WhatsApp",
         "stat_offline_value": "Offline"
     },
+    "download": {
+        "cta": "Baixar o app",
+        "title": "Baixe o GanIA grátis:",
+        "app_store": "Baixar na App Store",
+        "google_play": "Disponível no Google Play"
+    },
     "lead_form": {
         "page_title": "O controle total da sua fazenda a um clique",
         "page_subtitle": "Deixe seus dados e receba informações, demo e benefícios especiais da GANIA.",

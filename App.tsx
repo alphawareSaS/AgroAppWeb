@@ -8,7 +8,7 @@ import DashboardPreview from './components/DashboardPreview';
 import Plans from './components/Plans';
 import WhatsAppButton from './components/WhatsAppButton';
 import Footer from './components/Footer';
-import InstallPWA from './components/InstallPWA';
+import FloatingButtons from './components/FloatingButtons';
 import LeadFormPage from './components/LeadFormPage';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -158,7 +158,7 @@ function App() {
 
       <Footer />
       <WhatsAppButton />
-      <InstallPWA />
+      <FloatingButtons />
       <Analytics />
     </div>
   );

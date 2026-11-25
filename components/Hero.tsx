@@ -1,13 +1,14 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { usePWA } from '../hooks/usePWA';
-import PWAInstructions from './PWAInstructions';
+import { useAppDownload } from '../hooks/useAppDownload';
+import { DOWNLOAD_SECTION_ID } from '../services/appStores';
 import LeadForm from './LeadForm';
+import StoreBadges from './StoreBadges';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
-  const { isInstalled, install, showInstructions, setShowInstructions, isIOS } = usePWA();
+  const { os, downloadHref } = useAppDownload();
 
   return (
     <section id="inicio" className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 overflow-hidden bg-white">
@@ -79,23 +80,23 @@ const Hero: React.FC = () => {
                 {t('hero.cta_whatsapp')}
               </a>
 
-              {!isInstalled && (
-                <button
-                  onClick={install}
+              {/* Solo en celular: lleva a la tienda de ese celular. En computador están las insignias de abajo. */}
+              {os && (
+                <a
+                  href={downloadHref}
                   className="flex items-center justify-center gap-3 bg-white text-emerald-900 border-2 border-emerald-100 px-6 sm:px-8 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-extrabold hover:border-emerald-600 hover:text-emerald-600 transition-all shadow-sm hover:shadow-md"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
-                  Instalar App
-                </button>
+                  {t('download.cta')}
+                </a>
               )}
+            </div>
 
-              <PWAInstructions
-                isOpen={showInstructions}
-                onClose={() => setShowInstructions(false)}
-                isIOS={isIOS}
-              />
+            <div id={DOWNLOAD_SECTION_ID} className="scroll-mt-28 space-y-3">
+              <p className="text-sm font-bold text-gray-500">{t('download.title')}</p>
+              <StoreBadges className="justify-center lg:justify-start" />
             </div>
 
             <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-10 pt-4 opacity-70">

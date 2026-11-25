@@ -3,6 +3,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import logo from '../Imagenes/Logo/logo.png';
+import StoreBadges from './StoreBadges';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -19,6 +20,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-500 leading-relaxed">
               {t('footer.slogan')}
             </p>
+            <StoreBadges />
             <div className="flex gap-4">
               {['facebook', 'twitter', 'instagram', 'linkedin'].map(social => (
                 <a key={social} href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 hover:bg-emerald-100 hover:text-emerald-600 transition-all">
